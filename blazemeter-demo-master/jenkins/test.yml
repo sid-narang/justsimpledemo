@@ -1,7 +1,7 @@
 ---
 modules:
   blazemeter:
-    token: 3e777ceb0863a9700800
+    token: a968786f085e09e3e404
 
 reporting:
   - module: blazemeter
