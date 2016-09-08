@@ -1,0 +1,1037 @@
+[2016-09-08 16:35:00,026 INFO root] Taurus CLI Tool v1.6.8
+[2016-09-08 16:35:00,027 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': 'bzt.log', 'option': None, 'aliases': []}
+[2016-09-08 16:35:00,027 DEBUG root] Python: CPython 2.7.10
+[2016-09-08 16:35:00,027 DEBUG root] OS: ('Darwin', 'Sids-MacBook-Pro-2.local', '14.5.0', 'Darwin Kernel Version 14.5.0: Mon Aug 29 21:14:16 PDT 2016; root:xnu-2782.50.6~1/RELEASE_X86_64', 'x86_64', 'i386')
+[2016-09-08 16:35:00,027 INFO root] Starting with configs: ['simple.yml']
+[2016-09-08 16:35:00,027 INFO Engine] Configuring...
+[2016-09-08 16:35:00,027 DEBUG Engine] Reading machine configs from: /etc/bzt.d
+[2016-09-08 16:35:00,027 INFO Engine] No personal config: /Users/sidnarang/.bzt-rc
+[2016-09-08 16:35:00,027 DEBUG Engine.Configuration] Configs: ['/etc/bzt.d/10-base.json', '/etc/bzt.d/99-installID.yml']
+[2016-09-08 16:35:00,028 DEBUG Engine.Configuration] Reading /etc/bzt.d/10-base.json as JSON
+[2016-09-08 16:35:00,029 DEBUG Engine.Configuration] Reading /etc/bzt.d/99-installID.yml as YAML
+[2016-09-08 16:35:00,030 DEBUG Engine.Configuration] Configs: ['simple.yml']
+[2016-09-08 16:35:00,030 DEBUG Engine.Configuration] Reading simple.yml as YAML
+[2016-09-08 16:35:00,032 DEBUG root] Configs: ['simple.yml']
+[2016-09-08 16:35:00,032 DEBUG root] Reading simple.yml as YAML
+[2016-09-08 16:35:00,034 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.6.8&installID=c8843905-b92c-4f70-b648-47b394eef70f
+[2016-09-08 16:35:00,433 DEBUG Engine] Result: {"latest":"1.6.8","needsUpgrade":false}
+[2016-09-08 16:35:00,433 DEBUG Engine] Installation is up-to-date
+[2016-09-08 16:35:00,433 INFO Engine] Artifacts dir: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578
+[2016-09-08 16:35:00,433 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective
+[2016-09-08 16:35:00,435 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.yml
+[2016-09-08 16:35:00,448 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.json
+[2016-09-08 16:35:00,448 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/merged.yml
+[2016-09-08 16:35:00,449 DEBUG root] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/merged.yml
+[2016-09-08 16:35:00,450 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/merged.json
+[2016-09-08 16:35:00,450 DEBUG root] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/merged.json
+[2016-09-08 16:35:00,450 DEBUG Engine] Add existing artifact (move=False): simple.yml
+[2016-09-08 16:35:00,451 DEBUG Engine] Copying simple.yml to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/simple.yml
+[2016-09-08 16:35:00,451 INFO Engine] Preparing...
+[2016-09-08 16:35:00,451 DEBUG Engine] Module config: consolidator defaultdict(None, {u'ignore-labels': [u'ignore'], u'percentiles': [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0], u'class': u'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2016-09-08 16:35:00,451 DEBUG root] Importing module: bzt.modules.aggregator
+[2016-09-08 16:35:00,455 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/Library/Python/2.7/site-packages/bzt/modules/aggregator.pyc'>
+[2016-09-08 16:35:00,455 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2016-09-08 16:35:00,455 DEBUG Engine] Module config: monitoring defaultdict(None, {u'class': u'bzt.modules.monitoring.Monitoring'})
+[2016-09-08 16:35:00,455 DEBUG root] Importing module: bzt.modules.monitoring
+[2016-09-08 16:35:00,481 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/Library/Python/2.7/site-packages/bzt/modules/monitoring.pyc'>
+[2016-09-08 16:35:00,481 DEBUG Engine] Module config: local defaultdict(None, {u'class': u'bzt.modules.provisioning.Local'})
+[2016-09-08 16:35:00,481 DEBUG root] Importing module: bzt.modules.provisioning
+[2016-09-08 16:35:00,482 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/Library/Python/2.7/site-packages/bzt/modules/provisioning.pyc'>
+[2016-09-08 16:35:00,482 DEBUG Engine] Module config: jmeter defaultdict(None, {u'path': u'~/.bzt/jmeter-taurus/', u'plugins': [u'jpgc-casutg', u'jpgc-dummy', u'jpgc-ffw', u'jpgc-fifo', u'jpgc-functions', u'jpgc-json', u'jpgc-perfmon', u'jpgc-prmctl', u'jpgc-tst'], u'properties': defaultdict(None, {u'jmeter.save.saveservice.autoflush': u'true', u'jmeterengine.force.system.exit': u'true', u'jmeter.save.saveservice.connect_time': u'true', u'summariser.name': u'', u'mode': u'Stripped'}), u'class': u'bzt.modules.jmeter.JMeterExecutor'})
+[2016-09-08 16:35:00,482 DEBUG root] Importing module: bzt.modules.jmeter
+[2016-09-08 16:35:00,492 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/Library/Python/2.7/site-packages/bzt/modules/jmeter.pyc'>
+[2016-09-08 16:35:00,492 DEBUG Engine.local] Preparing executor: jmeter/4398150160
+[2016-09-08 16:35:00,492 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/jmeter.log
+[2016-09-08 16:35:00,492 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2016-09-08 16:35:00,493 DEBUG Engine.jmeter] Port 4445 is free
+[2016-09-08 16:35:00,493 DEBUG Engine.jmeter] Using port 4445 for management
+[2016-09-08 16:35:00,493 DEBUG Engine.jmeter.JavaVM] Trying: ['java', '-version']
+[2016-09-08 16:35:00,578 DEBUG Engine.jmeter.JavaVM] JavaVM output: java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+
+[2016-09-08 16:35:00,578 DEBUG Engine.jmeter.TclLibrary] We don't need to check tcl library on this platform
+[2016-09-08 16:35:00,578 DEBUG Engine.jmeter.JMeter] Trying jmeter: /Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh
+[2016-09-08 16:35:00,580 DEBUG bzt.utils] Executing shell: [u'/Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh', '-j', '/var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmeterrMuHgSlog', '--version']
+[2016-09-08 16:35:00,992 DEBUG Engine.jmeter.JMeter] JMeter check: Copyright (c) 1998-2015 The Apache Software Foundation
+Version 2.13 r1665067
+ / None
+[2016-09-08 16:35:00,993 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/requests.jmx
+[2016-09-08 16:35:00,994 DEBUG JMeterScenarioBuilder] Saving JMX to: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/requests.jmx
+[2016-09-08 16:35:00,995 DEBUG Engine.jmeter] Load: LoadSpec(concurrency=100, throughput=None, ramp_up=60.0, hold=300.0, iterations=0, duration=360.0, steps=None)
+[2016-09-08 16:35:00,997 DEBUG Engine.jmeter] Original threads: 1.0
+[2016-09-08 16:35:00,997 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:00,998 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:00,998 DEBUG Engine.jmeter] Enforcing parent sample for transaction controller
+[2016-09-08 16:35:00,999 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/modified_requests.jmx
+[2016-09-08 16:35:00,999 DEBUG JMX] Saving JMX to: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/modified_requests.jmx
+[2016-09-08 16:35:00,999 DEBUG Engine.jmeter] Additional properties: defaultdict(None, {u'jmeter.save.saveservice.autoflush': u'true', u'jmeter.save.saveservice.connect_time': u'true', 'user.classpath': '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578', u'summariser.name': u'', u'jmeterengine.force.system.exit': u'true', 'jmeter.save.saveservice.timestamp_format': 'ms', u'mode': u'Stripped', 'jmeterengine.nongui.maxport': 4445, 'jmeterengine.nongui.port': 4445})
+[2016-09-08 16:35:00,999 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/jmeter-bzt.properties
+[2016-09-08 16:35:00,999 DEBUG Engine.jmeter] Additional system properties defaultdict(None, {'sun.net.inetaddr.ttl': 0})
+[2016-09-08 16:35:00,999 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/system.properties
+[2016-09-08 16:35:01,000 DEBUG Engine] Module config: final_stats defaultdict(None, {u'class': u'bzt.modules.reporting.FinalStatus'})
+[2016-09-08 16:35:01,000 DEBUG root] Importing module: bzt.modules.reporting
+[2016-09-08 16:35:01,004 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/Library/Python/2.7/site-packages/bzt/modules/reporting.pyc'>
+[2016-09-08 16:35:01,004 DEBUG Engine] Module config: console defaultdict(None, {u'disable': False, u'class': u'bzt.modules.console.ConsoleStatusReporter'})
+[2016-09-08 16:35:01,005 DEBUG root] Importing module: bzt.modules.console
+[2016-09-08 16:35:01,005 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/Library/Python/2.7/site-packages/bzt/modules/console.pyc'>
+[2016-09-08 16:35:01,005 DEBUG Engine] Module config: blazemeter defaultdict(None, {'token': '********', u'class': u'bzt.modules.blazemeter.BlazeMeterUploader'})
+[2016-09-08 16:35:01,005 DEBUG root] Importing module: bzt.modules.blazemeter
+[2016-09-08 16:35:01,005 DEBUG root] Loading class: 'BlazeMeterUploader' from <module 'bzt.modules.blazemeter' from '/Library/Python/2.7/site-packages/bzt/modules/blazemeter.pyc'>
+[2016-09-08 16:35:01,012 DEBUG BlazeMeterClient] Request: GET https://a.blazemeter.com/api/latest/web/version None
+[2016-09-08 16:35:02,020 DEBUG BlazeMeterClient] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": "blazemeter-backend-package 3124 release/2016-08-22_48_3 B3124  Wed Aug 31 18:43:23 2016 +0300 162d9700003d7a20d6e039a0761966874e9e7638\n"
+}
+[2016-09-08 16:35:02,021 DEBUG BlazeMeterClient] Request: GET https://a.blazemeter.com/api/latest/tests None
+[2016-09-08 16:35:02,956 DEBUG BlazeMeterClient] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        {
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "created": 1473375998,
+            "updated": 1473375998,
+            "configuration": {
+                
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Tests for user: 50
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473375998, u'name': u'Taurus_SN_Simple', u'created': 1473375998, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267079}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Matched: {u'updated': 1473375998, u'name': u'Taurus_SN_Simple', u'created': 1473375998, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267079}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473374655, u'name': u'Taurus_SN Demo', u'created': 1473374655, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267071}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473365980, u'name': u'Taurus Demo B', u'created': 1473365980, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267026}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473362305, u'name': u'BlazeDemo', u'kpiTrackingData': {u'trends': [u'responseTime', u'errPercent', u'hitCount', u'bandwidth', u'latency']}, u'created': 1435334062, u'projectId': None, u'userId': 106819, u'draftId': u'td_2015_06_26_08_52_35_106819_3211', u'lastRunTime': 1473362305, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'network': {u'latency': 90, u'bandwidth': 850, u'preset': u'3G-good', u'packetloss': 0}, u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'description': u'Response time > 4 Secs', u'stopTestOnViolation': False, u'value': u'4000', u'label': u'ALL', u'field': u'responseTime.avg', u'op': u'gt'}], u'slidingWindow': False}, u'newrelic': [u'561ec211848853c37fd9eea3'], u'jmeter': {u'override': {u'duration': 20, u'rampup': 600, u'iterations': -1}, u'version': u'2.11blazemeter', u'filename': u'_blazedemo_v3.jmx'}}, u'type': u'jmeter', u'location': u'us-west-1', u'concurrency': 450, u'dedicatedIpsEnabled': False}, u'id': 5079795}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473350484, u'name': u'test', u'created': 1473350484, u'projectId': 36993, u'userId': 106819, u'draftId': u'td_2016_09_08_08_50_02_106819_3525', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 60, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'sel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266928}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473348098, u'name': u'test', u'created': 1473348098, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_09_08_08_15_31_106819_2785', u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 1, u'location': u'us-east-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 30, u'rampup': 300, u'threads': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'sel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266913}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473329240, u'name': u'Aldo_fixed', u'created': 1473273163, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_09_07_11_32_07_106819_581', u'lastRunTime': 1473329240, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_us_men.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5266349}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473296558, u'name': u'Taurus Test', u'created': 1473296558, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266492}
+[2016-09-08 16:35:02,958 DEBUG BlazeMeterClient] Test: {u'updated': 1473296556, u'name': u'Taurus Demo', u'created': 1473296556, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266491}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1473277180, u'name': u'demo100', u'kpiTrackingData': {u'trends': [u'hitCount', u'responseTime', u'errPercent']}, u'created': 1473276126, u'projectId': 42025, u'userId': 149837, u'draftId': u'td_2016_09_07_15_20_27_149837_2921', u'lastRunTime': 1473276133, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 200, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo100.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266372}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1473177722, u'name': u'demo91', u'kpiTrackingData': [], u'created': 1473176589, u'projectId': 41991, u'userId': 149837, u'draftId': u'td_2016_09_06_11_40_33_149837_9485', u'lastRunTime': 1473177722, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-central1-a', u'concurrency': 1001, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 24}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 77, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo91.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5265364}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472739682, u'name': u'timer test', u'created': 1472739673, u'projectId': 39789, u'userId': 149457, u'draftId': u'td_2016_09_01_10_20_25_149457_4299', u'lastRunTime': 1472739682, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 1, u'iterations': -1}, u'version': u'2.13', u'filename': u'simple-timer-test.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5262369}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472661688, u'name': u'easyTravel static', u'created': 1472135796, u'projectId': 41713, u'userId': 149837, u'draftId': u'td_2016_08_25_10_34_31_149837_5423', u'lastRunTime': 1472661688, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 201, u'plugins': {u'splitCSV': {u'enabled': False}, u'throughputController': {u'throughput': 10}, u'remoteControl': [{u'value': u'32790', u'key': u'port'}, {u'value': u'52.207.232.110', u'key': u'server'}], u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'field': u'responseTime.avg', u'op': u'lt', u'description': u'too slow', u'value': u'1000', u'label': u'Home'}], u'slidingWindow': False}, u'dynaTrace': {u'headerAttributes': []}, u'hosts': [{u'ip': u'52.91.89.252', u'hostname': u'aws-et'}], u'jmeter': {u'override': {u'duration': 5, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'easyTravel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5257243}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472579664, u'name': u'Medium Demo', u'kpiTrackingData': {u'trends': [u'hitCount', u'latency', u'responseTime', u'stdResp', u'errPercent'], u'limit': 25}, u'created': 1465380035, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_06_08_05_59_34_149837_3392', u'lastRunTime': 1470412564, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'standard_demo.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 130, u'javaVersion': u'1.7'}, u'id': 5214946}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472579072, u'name': u'demo80', u'created': 1472578914, u'projectId': 41823, u'userId': 149837, u'draftId': u'td_2016_08_30_13_41_27_149837_914', u'lastRunTime': 1472579072, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 201, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 6, u'rampup': 154, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo80.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5260647}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472234593, u'name': u'demo70_c', u'created': 1472222316, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_08_26_10_37_42_149837_6770', u'lastRunTime': 1472234593, u'configuration': {u'serversCount': 4, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 40}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo70.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'javaVersion': u'1.7'}, u'id': 5258194}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472233405, u'name': u'demo72', u'created': 1472233399, u'projectId': 41754, u'userId': 149837, u'draftId': u'td_2016_08_26_13_40_51_149837_6643', u'lastRunTime': 1472233405, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 50}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo72.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5258302}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472221129, u'name': u'demo70', u'created': 1472221003, u'projectId': 41748, u'userId': 149837, u'draftId': u'td_2016_08_26_10_16_22_149837_9393', u'lastRunTime': 1472221129, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo70.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 100, u'javaVersion': u'1.7'}, u'id': 5258184}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472064052, u'name': u'simple_travel_nr', u'kpiTrackingData': {u'limit': 25}, u'created': 1471368991, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1472063285, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 20, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'54.210.176.248:8000', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'newrelic': [u'57b48077f168ec5b193b60da']}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5249495}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1472063012, u'name': u'staging', u'kpiTrackingData': [], u'created': 1470246274, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_13_43_48_149837_7648', u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'taurus': {u'filename': u'staging-inline.yml'}}, u'type': u'taurus', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5240460}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1471988728, u'name': u'property test', u'created': 1468530913, u'projectId': 40484, u'userId': 149837, u'draftId': u'td_2016_07_14_17_13_09_149837_9274', u'lastRunTime': 1471988728, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 0, u'iterations': -1}, u'version': u'2.13', u'filename': u'property_test.jmx'}, u'remoteControl': [{u'value': u'blazedemo.com', u'key': u'servername'}]}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5230640}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1471967880, u'name': u'demo60', u'created': 1471967872, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_08_23_11_53_32_149837_7771', u'lastRunTime': 1471967880, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-central1-a', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 20}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo60.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5255530}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1471900323, u'name': u'easyTravel w/ dt apm', u'created': 1471899028, u'projectId': 40484, u'userId': 149837, u'lastRunTime': 1471900323, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 50, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 1, u'override': {u'duration': 20, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.208.16.171:32791', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'dynaTrace': {u'headerAttributes': []}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5254847}
+[2016-09-08 16:35:02,959 DEBUG BlazeMeterClient] Test: {u'updated': 1471617391, u'name': u'demo51', u'created': 1471616949, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471617391, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 25, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'newrelic': [u'57b71950ef68eceb7f4c22c6'], u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\n\nWDS.browser.get("http://54.210.176.248:8001/")\n\nvar menu_option = WDS.browser.findElement(pkg.By.cssSelector("body > form > select:nth-child(4) > option:nth-child(2)"));\nmenu_option.click();\n\nvar submit = WDS.browser.findElement(pkg.By.cssSelector("body > form > input.btn.btn-primary"));\nsubmit.click();\n\nWDS.sampleResult.sampleEnd();\n\n\nvar result = WDS.browser.findElement(pkg.By.cssSelector(\'body > h1\'));\nvar result_text = result.getText();\nif(result_text.equals("Flights from New York to Boston:")) {\n    WDS.sampleResult.successful = true;\n    WDS.sampleResult.responseMessage = \'expected results returned\';\n}\nelse {\n    WDS.sampleResult.successful = false;\n    WDS.sampleResult.responseMessage = \'expected results not returned\';\n}\n', u'isExtra': False, u'label': u'transaction1'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 3, u'rampup': 60, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5252551}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471616277, u'name': u'webdriver', u'created': 1471465446, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471607829, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 25, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'newrelic': [u'57b6f3f5f168ec4b1d3b60d7', u'57b48077f168ec5b193b60da'], u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\n\nWDS.browser.get("http://54.210.176.248:8000/");\n\nvar menu_option = WDS.browser.findElement(pkg.By.cssSelector("body > form > select:nth-child(4) > option:nth-child(2)"));\nmenu_option.click();\n\nvar submit = WDS.browser.findElement(pkg.By.cssSelector("body > form > input.btn.btn-primary"));\nsubmit.click();\n\nWDS.sampleResult.sampleEnd();\n\n\nvar result = WDS.browser.findElement(pkg.By.cssSelector(\'body > h1\'));\nvar result_text = result.getText();\nif(result_text.equals("Flights from New York to Boston:")) {\n    WDS.sampleResult.successful = true;\n    WDS.sampleResult.responseMessage = \'expected results returned\';\n}\nelse {\n    WDS.sampleResult.successful = false;\n    WDS.sampleResult.responseMessage = \'expected results not returned\';\n}\n', u'isExtra': False, u'label': u'trans1'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 3, u'rampup': 0, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5250685}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471613559, u'name': u'simple_travel home page', u'created': 1471608806, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471613559, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.210.176.248:8000/', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'newrelicInsights': {u'credentialsId': u'57b708f5ef68ec67044c22bf'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5252427}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471464935, u'name': u'selenium_test', u'created': 1471026202, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471464935, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'import org.junit.After;\nimport org.junit.Before;\nimport org.junit.AfterClass;\nimport org.junit.BeforeClass;\nimport org.junit.Test;\n\nimport static org.junit.Assert.*;\n\nimport java.util.concurrent.TimeUnit;\nimport java.util.Date;\nimport java.io.File;\n\nimport org.openqa.selenium.support.ui.Select;\nimport org.openqa.selenium.interactions.Actions;\nimport org.openqa.selenium.firefox.FirefoxDriver;\nimport org.openqa.selenium.*;\n\nimport static org.openqa.selenium.OutputType.*;\n\npublic class Blazedemoju {\n    FirefoxDriver wd;\n\n    @Before\n    public void setUp() throws Exception {\n        wd = new FirefoxDriver();\n        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);\n    }\n\n    @Test\n    public void blazedemoju() {\n        wd.get("http://blazedemo.com/");\n        if (!wd.findElement(By.xpath("//div[3]/form/select[1]//option[3]")).isSelected()) {\n            wd.findElement(By.xpath("//div[3]/form/select[1]//option[3]")).click();\n        }\n        if (!wd.findElement(By.xpath("//div[3]/form/select[2]//option[6]")).isSelected()) {\n            wd.findElement(By.xpath("//div[3]/form/select[2]//option[6]")).click();\n        }\n        wd.findElement(By.cssSelector("input.btn.btn-primary")).click();\n        wd.findElement(By.xpath("//table[@class=\'table\']/tbody/tr[4]/td[1]/input")).click();\n        wd.findElement(By.cssSelector("input.btn.btn-primary")).click();\n    }\n\n    @After\n    public void tearDown() {\n        wd.quit();\n    }\n\n    public static boolean isAlertPresent(FirefoxDriver wd) {\n        try {\n            wd.switchTo().alert();\n            return true;\n        } catch (NoAlertPresentException e) {\n            return false;\n        }\n    }\n}\n', u'isExtra': False, u'label': u'sample'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 20, u'rampup': 1, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'location': u'us-central1-a', u'concurrency': 2, u'javaVersion': u'1.7'}, u'id': 5246896}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471444249, u'name': u'demo44sand', u'created': 1471444241, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_30_09_149837_2324', u'lastRunTime': 1471444249, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo44.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250424}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471444021, u'name': u'demo44', u'created': 1471443697, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_21_16_149837_8393', u'lastRunTime': 1471444021, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 1000, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 600, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo44.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250415}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471443153, u'name': u'demo43', u'created': 1471443047, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_10_30_149837_4679', u'lastRunTime': 1471443153, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo43.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5250402}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471437006, u'name': u'demo42', u'created': 1471436989, u'projectId': 41370, u'userId': 149837, u'draftId': u'td_2016_08_17_08_29_11_149837_3984', u'lastRunTime': 1471437006, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo42.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250294}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471375735, u'name': u'demo41_opl', u'created': 1471375117, u'projectId': 41456, u'userId': 149837, u'draftId': u'td_2016_08_16_15_16_59_149837_6643', u'lastRunTime': 1471375735, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-57596c2187a875f532fc9b80', u'concurrency': 3, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 3, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo41.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249577}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471371975, u'name': u'demo41', u'created': 1471371966, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_16_14_23_54_149837_6455', u'lastRunTime': 1471371975, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 200, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo41.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249538}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471362645, u'name': u'demo40', u'created': 1471361550, u'projectId': 41443, u'userId': 149837, u'draftId': u'td_2016_08_16_11_28_50_149837_6739', u'lastRunTime': 1471362645, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 150, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'field': u'responseTime.avg', u'op': u'lt', u'description': u'too long', u'value': u'700', u'label': u'ALL'}], u'slidingWindow': False}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo40.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249391}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471024281, u'name': u'blazedemo_nr', u'created': 1471024281, u'projectId': 41370, u'userId': 149837, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'www.blazedemo.com', u'label': u'blazedemo', u'headers': [], u'type': u'GET', u'order': 1}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5246878}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1471019386, u'name': u'simple_travel_url', u'created': 1471019378, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471019386, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 480, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.210.176.248:8000/', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 1}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5246835}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1470939701, u'name': u'Optum1', u'created': 1469650909, u'projectId': 39649, u'userId': 106819, u'draftId': u'td_2016_07_27_13_11_08_106819_4552', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}, u'newrelic': [u'561ec211848853c37fd9eea3']}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5236874}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1470939634, u'name': u'Optum1 - Copy', u'created': 1470939634, u'projectId': 36993, u'userId': 106819, u'draftId': u'td_2016_07_27_13_11_08_106819_4552', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-555543a256e0941b4bb6edad', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 30, u'rampup': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}, u'newrelic': [u'561ec211848853c37fd9eea3']}, u'duration': 30, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5246100}
+[2016-09-08 16:35:02,960 DEBUG BlazeMeterClient] Test: {u'updated': 1470939611, u'name': u'test123', u'created': 1470935973, u'projectId': 36998, u'userId': 106819, u'draftId': u'td_2016_08_11_10_13_23_106819_6387', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-555543a256e0941b4bb6edad', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 10, u'rampup': 10, u'iterations': -1}, u'version': u'2.13', u'filename': u'Test100.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5246069}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470850461, u'name': u'Test12', u'created': 1470850450, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_10_10_26_45_106819_329', u'lastRunTime': 1470850461, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 10, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5245048}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470733134, u'name': u'Aldo_8_9_50K_Final', u'created': 1470678796, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_08_10_51_56_106819_4075', u'lastRunTime': 1470733134, u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 45, u'location': u'us-east-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 60, u'rampup': 1800, u'threads': 500, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_again.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.8'}, u'id': 5242728}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470678819, u'name': u'Aldo_New', u'created': 1470420848, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_05_11_13_12_106819_959', u'lastRunTime': 1470678819, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 40, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 10, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_again.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.8'}, u'id': 5241581}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470658834, u'name': u'demo32', u'created': 1470656908, u'projectId': 41256, u'userId': 149837, u'draftId': u'td_2016_08_08_07_47_35_149837_9793', u'lastRunTime': 1470658834, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo32.jmx'}, u'hosts': [{u'ip': u'54.210.176.248', u'hostname': u'aws-uut'}], u'dynaTrace': {u'headerAttributes': []}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5242371}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470653732, u'name': u'SimpleTravel home', u'created': 1470650048, u'projectId': 41222, u'userId': 149837, u'lastRunTime': 1470653732, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'dynaTrace': {u'headerAttributes': []}, u'hosts': [{u'ip': u'54.210.176.248', u'hostname': u'aws-uut'}], u'http': {u'delay': 2500, u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://aws-uut', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5242275}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470422002, u'name': u'demo25', u'created': 1470421345, u'projectId': 41222, u'userId': 149837, u'draftId': u'td_2016_08_05_14_17_26_149837_5505', u'lastRunTime': 1470422002, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 300, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo25.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5241583}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470352841, u'name': u'Test', u'created': 1470352833, u'projectId': None, u'userId': 106819, u'lastRunTime': 1470352841, u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 1, u'location': u'us-west-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\nWDS.browser.manage().window().maximize();\nWDS.browser.get("http://localhost");\n\nvar searchField = WDS.browser.findElement(pkg.By.id("some_element_id"));\nsearchField.click();\nWDS.log.info(WDS.name, "has logged an entry");\n\nWDS.sampleResult.sampleEnd();', u'isExtra': False, u'label': u'Test'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 20, u'rampup': 300, u'threads': 5, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5241124}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470246946, u'name': u'bzt generated jmeter', u'created': 1470246936, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_13_51_30_149837_8473', u'lastRunTime': 1470246946, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 500, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'modified_requests.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5240463}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470240344, u'name': u'Demo23', u'created': 1470239763, u'projectId': 41150, u'userId': 149837, u'draftId': u'td_2016_08_03_11_53_21_149837_2259', u'lastRunTime': 1470240344, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo23.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5240418}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1470237300, u'name': u'concurrency example', u'created': 1470237050, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_11_09_58_149837_9530', u'lastRunTime': 1470237300, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 120, u'iterations': -1}, u'version': u'2.13', u'filename': u'concurrency-example.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 150, u'javaVersion': u'1.7'}, u'id': 5240396}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Test: {u'updated': 1469814878, u'name': u'recording demo', u'created': 1469814864, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_07_29_13_52_05_149837_9606', u'lastRunTime': 1469814878, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'recording.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5237865}
+[2016-09-08 16:35:02,961 DEBUG BlazeMeterClient] Using test ID: 5267079
+[2016-09-08 16:35:02,963 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.yml
+[2016-09-08 16:35:02,985 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.json
+[2016-09-08 16:35:02,986 INFO Engine] Starting...
+[2016-09-08 16:35:02,986 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:02,986 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:02,986 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:02,986 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:02,986 INFO Engine.console] Waiting for results...
+[2016-09-08 16:35:02,986 DEBUG Engine] Startup <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:02,987 INFO Engine.blazemeter.BlazeMeterUploader] Initiating data feeding...
+[2016-09-08 16:35:02,987 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/tests/5267079/start-external None
+[2016-09-08 16:35:03,687 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "session": {
+            "id": "r-ext-57d1f5a743bb2",
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "offset": 0,
+            "statusCode": 15,
+          
+[2016-09-08 16:35:03,687 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PATCH https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f5a743bb2 {
+ "name": "Taurus_SN_Simple"
+}
+[2016-09-08 16:35:04,202 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f5a743bb2",
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 15,
+        "status": "INITIALIZING",
+        "labels":
+[2016-09-08 16:35:04,202 INFO Engine.blazemeter] Started data feeding: https://a.blazemeter.com/app/#reports/15550693
+[2016-09-08 16:35:04,268 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:04,269 DEBUG Engine.local] Delay setup: 0(start-at) + 0(delay) = 0
+[2016-09-08 16:35:04,271 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.yml
+[2016-09-08 16:35:04,294 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.json
+[2016-09-08 16:35:04,294 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:04,295 DEBUG bzt.utils] Executing shell: [u'/Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh', '-n', '-t', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/modified_requests.jmx', '-j', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/jmeter.log', '-q', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/jmeter-bzt.properties', '-S', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/system.properties']
+[2016-09-08 16:35:04,298 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:04,299 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:04,299 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] File not appeared yet: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:04,299 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] No data to start reading yet
+[2016-09-08 16:35:04,299 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:35:04,299 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:35:04,299 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:04,502 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:04,502 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:04,502 DEBUG Engine.console] Overriding logging streams
+[2016-09-08 16:35:04,502 DEBUG Engine.console] Redirected logging streams, [<logging.StreamHandler object at 0x104c63d90>]/{<logging.StreamHandler object at 0x104c63d90>: <open file '<stdout>', mode 'w' at 0x103e21150>}
+[2016-09-08 16:35:04,503 INFO Engine.console] Waiting for finish...
+[2016-09-08 16:35:04,536 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:04,536 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:04,536 DEBUG Engine] Iteration took 0.242 sec, sleeping for 0.758 sec...
+[2016-09-08 16:35:05,296 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:05,296 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:05,296 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:05,296 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Opening file: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:05,296 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:05,297 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 119 bytes (at speed 1048576)
+[2016-09-08 16:35:05,298 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Analyzed header line: ['timeStamp', 'elapsed', 'label', 'responseCode', 'responseMessage', 'threadName', 'success', 'grpThreads', 'allThreads', 'Latency', 'Hostname', 'Connect']
+[2016-09-08 16:35:05,298 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:35:05,298 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:35:05,298 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:05,299 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:05,299 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:05,304 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:05,304 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:05,304 DEBUG Engine] Iteration took 0.008 sec, sleeping for 0.992 sec...
+[2016-09-08 16:35:06,298 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:06,298 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:06,299 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:06,299 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:06,299 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:35:06,299 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:35:06,299 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:35:06,299 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:06,300 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:06,300 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:06,305 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:06,305 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:06,305 DEBUG Engine] Iteration took 0.007 sec, sleeping for 0.993 sec...
+[2016-09-08 16:35:07,298 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:07,299 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:07,299 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:07,299 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:07,299 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:35:07,299 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:35:07,299 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:35:07,299 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:07,300 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:07,300 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:07,305 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:07,305 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:07,305 DEBUG Engine] Iteration took 0.007 sec, sleeping for 0.993 sec...
+[2016-09-08 16:35:08,300 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:08,300 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:08,300 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:08,301 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:08,301 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 3 / 317 bytes (at speed 1048576)
+[2016-09-08 16:35:08,301 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:35:08,301 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:35:08,301 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:08,302 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:08,303 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:08,308 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:08,308 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:08,308 DEBUG Engine] Iteration took 0.008 sec, sleeping for 0.992 sec...
+[2016-09-08 16:35:09,300 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:09,301 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:09,301 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:09,301 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:09,301 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 106 bytes (at speed 1048576)
+[2016-09-08 16:35:09,301 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:35:09,301 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:35:09,301 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:09,303 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:09,303 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:09,310 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:09,310 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:09,310 DEBUG Engine] Iteration took 0.010 sec, sleeping for 0.990 sec...
+[2016-09-08 16:35:10,302 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:10,302 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:10,303 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:10,303 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:10,303 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 4 / 420 bytes (at speed 1048576)
+[2016-09-08 16:35:10,303 DEBUG Engine.jmeter.JTLReader] Buffer len: 3
+[2016-09-08 16:35:10,303 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377705
+[2016-09-08 16:35:10,304 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377705]
+[2016-09-08 16:35:10,305 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:10,307 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:10,307 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:10,313 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:10,313 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:10,313 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:35:11,302 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:11,302 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:11,302 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:11,303 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:11,303 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 3 / 320 bytes (at speed 1048576)
+[2016-09-08 16:35:11,303 DEBUG Engine.jmeter.JTLReader] Buffer len: 3
+[2016-09-08 16:35:11,303 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 6s
+[2016-09-08 16:35:11,307 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377705]
+[2016-09-08 16:35:11,307 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:11,309 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:11,309 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:11,314 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:11,314 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:11,314 DEBUG Engine] Iteration took 0.012 sec, sleeping for 0.988 sec...
+[2016-09-08 16:35:12,306 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:12,306 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:12,306 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:12,306 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:12,306 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 5 / 532 bytes (at speed 1048576)
+[2016-09-08 16:35:12,306 DEBUG Engine.jmeter.JTLReader] Buffer len: 5
+[2016-09-08 16:35:12,306 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377705]
+[2016-09-08 16:35:12,307 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:12,308 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:12,308 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:12,314 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:12,315 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:12,315 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:35:13,309 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:13,309 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:13,309 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:13,309 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:13,309 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 6 / 642 bytes (at speed 1048576)
+[2016-09-08 16:35:13,310 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:13,310 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377705]
+[2016-09-08 16:35:13,310 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:13,311 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:13,311 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:13,318 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:13,319 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:13,319 DEBUG Engine] Iteration took 0.010 sec, sleeping for 0.990 sec...
+[2016-09-08 16:35:14,312 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:14,313 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:14,313 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:14,313 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:14,313 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 6 / 640 bytes (at speed 1048576)
+[2016-09-08 16:35:14,314 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:14,314 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377706
+[2016-09-08 16:35:14,315 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377705, 1473377706]
+[2016-09-08 16:35:14,315 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:14,316 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:14,316 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:14,322 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:14,323 DEBUG Engine.blazemeter] KPI bulk buffer len: 0
+[2016-09-08 16:35:14,323 DEBUG Engine] Iteration took 0.010 sec, sleeping for 0.990 sec...
+[2016-09-08 16:35:15,312 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:15,312 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:15,313 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:15,313 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:15,313 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 7 / 746 bytes (at speed 1048576)
+[2016-09-08 16:35:15,313 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:15,313 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377707
+[2016-09-08 16:35:15,314 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377705, 1473377706, 1473377707]
+[2016-09-08 16:35:15,314 DEBUG Engine.consolidator] Merging into 1473377705
+[2016-09-08 16:35:15,314 DEBUG Engine.consolidator] Merging 1473377705
+[2016-09-08 16:35:15,317 DEBUG Engine.consolidator] Processed datapoint: 1473377705/None
+[2016-09-08 16:35:15,317 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:15,319 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:15,319 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:15,336 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:15,336 DEBUG Engine.blazemeter] KPI bulk buffer len: 1
+[2016-09-08 16:35:15,336 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://data.blazemeter.com/submit.php?session_id=r-ext-57d1f5a743bb2&signature=d98c0b349bb2027952e615dc1984df3e&test_id=5267079&user_id=106819&pq=0&target=labels_bulk&update=1 {
+ "sourceID": 4399831440, 
+ "labels": [
+  {
+   "percentileHistogramLatency": [], 
+   "otherErrorsCount": 0, 
+   "failedEmbeddedResources": [], 
+   "intervals": [
+    {
+     "by": {
+      "std": 0, 
+      "min": 0, 
+      "max": 0, 
+      "sum": 0, 
+      
+[2016-09-08 16:35:16,182 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {"api_version":2,"error":null,"result":{"session":{"_id":"r-ext-57d1f5a743bb2","name":"Taurus_SN_Simple","statusCode":100,"status":"INITIALIZING"}}}
+[2016-09-08 16:35:16,182 DEBUG Engine.blazemeter.BlazeMeterUploader] Result: {u'status': u'INITIALIZING', u'_id': u'r-ext-57d1f5a743bb2', u'name': u'Taurus_SN_Simple', u'statusCode': 100}
+[2016-09-08 16:35:16,191 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f5a743bb2/files?signature=d98c0b349bb2027952e615dc1984df3e --===============2210878273132658865==
+Content-Disposition: file; name="file"; filename="Sids-MacBook-Pro-2.local.monitoring.json"
+Content-Type: application/json
+
+{
+ "kpis": {
+  "CPU": "CPU", 
+  "Network I/O": "Network I/O", 
+  "Memory": "Memory"
+ }, 
+
+[2016-09-08 16:35:17,132 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "Sids-MacBook-Pro-2.local.monitoring.json"
+    ]
+}
+[2016-09-08 16:35:17,132 DEBUG Engine] Iteration took 1.820 sec, sleeping for -0.820 sec...
+[2016-09-08 16:35:17,132 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:17,133 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:17,133 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:17,133 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:17,133 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 16 / 1708 bytes (at speed 1048576)
+[2016-09-08 16:35:17,133 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:17,133 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377708
+[2016-09-08 16:35:17,135 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377706, 1473377707, 1473377708]
+[2016-09-08 16:35:17,135 DEBUG Engine.consolidator] Merging into 1473377706
+[2016-09-08 16:35:17,135 DEBUG Engine.consolidator] Merging 1473377706
+[2016-09-08 16:35:17,137 DEBUG Engine.consolidator] Processed datapoint: 1473377706/None
+[2016-09-08 16:35:17,137 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:17,139 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:17,139 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:17,159 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:17,159 DEBUG Engine.blazemeter] KPI bulk buffer len: 1
+[2016-09-08 16:35:17,159 DEBUG Engine] Iteration took 0.027 sec, sleeping for 0.973 sec...
+[2016-09-08 16:35:18,133 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:18,133 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:18,133 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:18,133 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:18,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 8 / 857 bytes (at speed 1048576)
+[2016-09-08 16:35:18,134 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:18,134 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377709
+[2016-09-08 16:35:18,135 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377707, 1473377708, 1473377709]
+[2016-09-08 16:35:18,136 DEBUG Engine.consolidator] Merging into 1473377707
+[2016-09-08 16:35:18,136 DEBUG Engine.consolidator] Merging 1473377707
+[2016-09-08 16:35:18,139 DEBUG Engine.consolidator] Processed datapoint: 1473377707/None
+[2016-09-08 16:35:18,139 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:18,141 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:18,141 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:18,164 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:18,164 DEBUG Engine.blazemeter] KPI bulk buffer len: 2
+[2016-09-08 16:35:18,164 DEBUG Engine] Iteration took 0.031 sec, sleeping for 0.969 sec...
+[2016-09-08 16:35:19,133 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:19,133 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:19,133 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:19,133 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:19,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1066 bytes (at speed 1048576)
+[2016-09-08 16:35:19,134 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:19,134 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377710
+[2016-09-08 16:35:19,136 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377708, 1473377709, 1473377710]
+[2016-09-08 16:35:19,136 DEBUG Engine.consolidator] Merging into 1473377708
+[2016-09-08 16:35:19,136 DEBUG Engine.consolidator] Merging 1473377708
+[2016-09-08 16:35:19,139 DEBUG Engine.consolidator] Processed datapoint: 1473377708/None
+[2016-09-08 16:35:19,139 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:19,140 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:19,140 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:19,165 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:19,165 DEBUG Engine.blazemeter] KPI bulk buffer len: 3
+[2016-09-08 16:35:19,165 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:35:20,133 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:20,133 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:20,133 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:20,133 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:20,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1070 bytes (at speed 1048576)
+[2016-09-08 16:35:20,134 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:20,134 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 5s
+[2016-09-08 16:35:20,141 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377711
+[2016-09-08 16:35:20,142 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377712
+[2016-09-08 16:35:20,143 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377712, 1473377709, 1473377710, 1473377711]
+[2016-09-08 16:35:20,143 DEBUG Engine.consolidator] Merging into 1473377709
+[2016-09-08 16:35:20,143 DEBUG Engine.consolidator] Merging 1473377709
+[2016-09-08 16:35:20,146 DEBUG Engine.consolidator] Processed datapoint: 1473377709/None
+[2016-09-08 16:35:20,146 DEBUG Engine.consolidator] Merging into 1473377710
+[2016-09-08 16:35:20,146 DEBUG Engine.consolidator] Merging 1473377710
+[2016-09-08 16:35:20,148 DEBUG Engine.consolidator] Processed datapoint: 1473377710/None
+[2016-09-08 16:35:20,148 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:20,149 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:20,149 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:20,182 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:20,183 DEBUG Engine.blazemeter] KPI bulk buffer len: 5
+[2016-09-08 16:35:20,183 DEBUG Engine] Iteration took 0.050 sec, sleeping for 0.950 sec...
+[2016-09-08 16:35:21,133 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:21,133 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:21,134 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:21,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:21,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1068 bytes (at speed 1048576)
+[2016-09-08 16:35:21,134 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:21,134 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377713
+[2016-09-08 16:35:21,136 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377712, 1473377713, 1473377711]
+[2016-09-08 16:35:21,136 DEBUG Engine.consolidator] Merging into 1473377711
+[2016-09-08 16:35:21,136 DEBUG Engine.consolidator] Merging 1473377711
+[2016-09-08 16:35:21,140 DEBUG Engine.consolidator] Processed datapoint: 1473377711/None
+[2016-09-08 16:35:21,140 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:21,141 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:21,141 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:21,162 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:21,162 DEBUG Engine.blazemeter] KPI bulk buffer len: 6
+[2016-09-08 16:35:21,162 DEBUG Engine] Iteration took 0.029 sec, sleeping for 0.971 sec...
+[2016-09-08 16:35:22,134 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:22,134 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:22,134 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:22,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:22,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1072 bytes (at speed 1048576)
+[2016-09-08 16:35:22,135 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:22,135 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377714
+[2016-09-08 16:35:22,137 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377712, 1473377713, 1473377714]
+[2016-09-08 16:35:22,137 DEBUG Engine.consolidator] Merging into 1473377712
+[2016-09-08 16:35:22,137 DEBUG Engine.consolidator] Merging 1473377712
+[2016-09-08 16:35:22,140 DEBUG Engine.consolidator] Processed datapoint: 1473377712/None
+[2016-09-08 16:35:22,140 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:22,142 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:22,142 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:22,163 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:22,163 DEBUG Engine.blazemeter] KPI bulk buffer len: 7
+[2016-09-08 16:35:22,163 DEBUG Engine] Iteration took 0.029 sec, sleeping for 0.971 sec...
+[2016-09-08 16:35:23,134 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:23,134 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:23,134 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:23,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:23,134 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 11 / 1175 bytes (at speed 1048576)
+[2016-09-08 16:35:23,134 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:23,134 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377715
+[2016-09-08 16:35:23,135 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377713, 1473377714, 1473377715]
+[2016-09-08 16:35:23,136 DEBUG Engine.consolidator] Merging into 1473377713
+[2016-09-08 16:35:23,136 DEBUG Engine.consolidator] Merging 1473377713
+[2016-09-08 16:35:23,138 DEBUG Engine.consolidator] Processed datapoint: 1473377713/None
+[2016-09-08 16:35:23,138 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:23,140 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:23,140 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:23,159 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:23,159 DEBUG Engine.blazemeter] KPI bulk buffer len: 8
+[2016-09-08 16:35:23,159 DEBUG Engine] Iteration took 0.025 sec, sleeping for 0.975 sec...
+[2016-09-08 16:35:24,136 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:24,136 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:24,136 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:24,136 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:24,136 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 13 / 1390 bytes (at speed 1048576)
+[2016-09-08 16:35:24,137 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:24,137 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377716
+[2016-09-08 16:35:24,139 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377714, 1473377715, 1473377716]
+[2016-09-08 16:35:24,139 DEBUG Engine.consolidator] Merging into 1473377714
+[2016-09-08 16:35:24,139 DEBUG Engine.consolidator] Merging 1473377714
+[2016-09-08 16:35:24,142 DEBUG Engine.consolidator] Processed datapoint: 1473377714/None
+[2016-09-08 16:35:24,142 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:24,144 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:24,144 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:24,162 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:24,163 DEBUG Engine.blazemeter] KPI bulk buffer len: 9
+[2016-09-08 16:35:24,163 DEBUG Engine] Iteration took 0.027 sec, sleeping for 0.973 sec...
+[2016-09-08 16:35:25,139 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:25,139 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:25,139 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:25,139 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:25,140 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 9 / 963 bytes (at speed 1048576)
+[2016-09-08 16:35:25,140 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:25,140 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377717
+[2016-09-08 16:35:25,142 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377715, 1473377716, 1473377717]
+[2016-09-08 16:35:25,142 DEBUG Engine.consolidator] Merging into 1473377715
+[2016-09-08 16:35:25,142 DEBUG Engine.consolidator] Merging 1473377715
+[2016-09-08 16:35:25,146 DEBUG Engine.consolidator] Processed datapoint: 1473377715/None
+[2016-09-08 16:35:25,146 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:25,147 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:25,147 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:25,169 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:25,169 DEBUG Engine.blazemeter] KPI bulk buffer len: 10
+[2016-09-08 16:35:25,169 DEBUG Engine] Iteration took 0.031 sec, sleeping for 0.969 sec...
+[2016-09-08 16:35:26,144 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:26,144 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:26,144 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:26,144 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:26,144 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1071 bytes (at speed 1048576)
+[2016-09-08 16:35:26,145 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:26,145 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377718
+[2016-09-08 16:35:26,147 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377716, 1473377717, 1473377718]
+[2016-09-08 16:35:26,147 DEBUG Engine.consolidator] Merging into 1473377716
+[2016-09-08 16:35:26,147 DEBUG Engine.consolidator] Merging 1473377716
+[2016-09-08 16:35:26,151 DEBUG Engine.consolidator] Processed datapoint: 1473377716/None
+[2016-09-08 16:35:26,151 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:26,152 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:26,153 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:26,169 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:26,169 DEBUG Engine.blazemeter] KPI bulk buffer len: 11
+[2016-09-08 16:35:26,169 DEBUG Engine] Iteration took 0.026 sec, sleeping for 0.974 sec...
+[2016-09-08 16:35:27,144 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:27,144 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:27,144 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:27,144 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:27,144 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1070 bytes (at speed 1048576)
+[2016-09-08 16:35:27,145 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:27,145 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377719
+[2016-09-08 16:35:27,146 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377717, 1473377718, 1473377719]
+[2016-09-08 16:35:27,146 DEBUG Engine.consolidator] Merging into 1473377717
+[2016-09-08 16:35:27,146 DEBUG Engine.consolidator] Merging 1473377717
+[2016-09-08 16:35:27,150 DEBUG Engine.consolidator] Processed datapoint: 1473377717/None
+[2016-09-08 16:35:27,150 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:27,151 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:27,151 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:27,172 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:27,172 DEBUG Engine.blazemeter] KPI bulk buffer len: 12
+[2016-09-08 16:35:27,172 DEBUG Engine] Iteration took 0.028 sec, sleeping for 0.972 sec...
+[2016-09-08 16:35:28,144 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:28,144 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:28,145 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:28,145 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:28,145 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 13 / 1389 bytes (at speed 1048576)
+[2016-09-08 16:35:28,145 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:28,146 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377720
+[2016-09-08 16:35:28,147 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377718, 1473377719, 1473377720]
+[2016-09-08 16:35:28,147 DEBUG Engine.consolidator] Merging into 1473377718
+[2016-09-08 16:35:28,147 DEBUG Engine.consolidator] Merging 1473377718
+[2016-09-08 16:35:28,151 DEBUG Engine.consolidator] Processed datapoint: 1473377718/None
+[2016-09-08 16:35:28,151 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:28,152 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:28,152 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:28,173 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:28,174 DEBUG Engine.blazemeter] KPI bulk buffer len: 13
+[2016-09-08 16:35:28,174 DEBUG Engine] Iteration took 0.030 sec, sleeping for 0.970 sec...
+[2016-09-08 16:35:29,148 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:29,148 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:29,148 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:29,148 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:29,149 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 7 / 748 bytes (at speed 1048576)
+[2016-09-08 16:35:29,149 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:29,149 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377721
+[2016-09-08 16:35:29,151 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377719, 1473377720, 1473377721]
+[2016-09-08 16:35:29,151 DEBUG Engine.consolidator] Merging into 1473377719
+[2016-09-08 16:35:29,151 DEBUG Engine.consolidator] Merging 1473377719
+[2016-09-08 16:35:29,154 DEBUG Engine.consolidator] Processed datapoint: 1473377719/None
+[2016-09-08 16:35:29,154 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:29,155 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:29,156 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:29,175 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:29,175 DEBUG Engine.blazemeter] KPI bulk buffer len: 14
+[2016-09-08 16:35:29,175 DEBUG Engine] Iteration took 0.027 sec, sleeping for 0.973 sec...
+[2016-09-08 16:35:30,149 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:30,149 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:30,149 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:30,150 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:30,150 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 14 / 1504 bytes (at speed 1048576)
+[2016-09-08 16:35:30,151 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:30,151 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377722
+[2016-09-08 16:35:30,154 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377723
+[2016-09-08 16:35:30,156 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377720, 1473377721, 1473377722, 1473377723]
+[2016-09-08 16:35:30,156 DEBUG Engine.consolidator] Merging into 1473377720
+[2016-09-08 16:35:30,156 DEBUG Engine.consolidator] Merging 1473377720
+[2016-09-08 16:35:30,160 DEBUG Engine.consolidator] Processed datapoint: 1473377720/None
+[2016-09-08 16:35:30,160 DEBUG Engine.consolidator] Merging into 1473377721
+[2016-09-08 16:35:30,160 DEBUG Engine.consolidator] Merging 1473377721
+[2016-09-08 16:35:30,164 DEBUG Engine.consolidator] Processed datapoint: 1473377721/None
+[2016-09-08 16:35:30,164 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:30,165 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:30,165 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:30,184 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:30,185 DEBUG Engine.blazemeter] KPI bulk buffer len: 16
+[2016-09-08 16:35:30,185 DEBUG Engine] Iteration took 0.036 sec, sleeping for 0.964 sec...
+[2016-09-08 16:35:31,149 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:31,149 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:31,149 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:31,149 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:31,149 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 9 / 962 bytes (at speed 1048576)
+[2016-09-08 16:35:31,149 DEBUG Engine.jmeter.JTLReader] Buffer len: 5
+[2016-09-08 16:35:31,149 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 6s
+[2016-09-08 16:35:31,155 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377722, 1473377723]
+[2016-09-08 16:35:31,155 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:31,157 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:31,157 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:31,163 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:31,164 DEBUG Engine.blazemeter] KPI bulk buffer len: 16
+[2016-09-08 16:35:31,164 DEBUG Engine] Iteration took 0.015 sec, sleeping for 0.985 sec...
+[2016-09-08 16:35:32,152 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:32,152 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:32,153 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:32,153 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:32,153 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 11 / 1177 bytes (at speed 1048576)
+[2016-09-08 16:35:32,153 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:35:32,153 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377722, 1473377723]
+[2016-09-08 16:35:32,153 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:32,155 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:32,155 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:32,164 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:32,164 DEBUG Engine.blazemeter] KPI bulk buffer len: 16
+[2016-09-08 16:35:32,164 DEBUG Engine] Iteration took 0.012 sec, sleeping for 0.988 sec...
+[2016-09-08 16:35:33,153 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:33,153 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:33,153 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:33,153 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:33,154 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 9 / 964 bytes (at speed 1048576)
+[2016-09-08 16:35:33,154 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:33,154 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377724
+[2016-09-08 16:35:33,157 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377722, 1473377723, 1473377724]
+[2016-09-08 16:35:33,157 DEBUG Engine.consolidator] Merging into 1473377722
+[2016-09-08 16:35:33,157 DEBUG Engine.consolidator] Merging 1473377722
+[2016-09-08 16:35:33,162 DEBUG Engine.consolidator] Processed datapoint: 1473377722/None
+[2016-09-08 16:35:33,162 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:33,164 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:33,164 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:33,183 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:33,183 DEBUG Engine.blazemeter] KPI bulk buffer len: 17
+[2016-09-08 16:35:33,183 DEBUG Engine] Iteration took 0.031 sec, sleeping for 0.969 sec...
+[2016-09-08 16:35:34,154 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:34,154 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:34,154 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:34,154 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:34,155 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 10 / 1069 bytes (at speed 1048576)
+[2016-09-08 16:35:34,155 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:34,155 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377725
+[2016-09-08 16:35:34,157 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377723, 1473377724, 1473377725]
+[2016-09-08 16:35:34,157 DEBUG Engine.consolidator] Merging into 1473377723
+[2016-09-08 16:35:34,157 DEBUG Engine.consolidator] Merging 1473377723
+[2016-09-08 16:35:34,161 DEBUG Engine.consolidator] Processed datapoint: 1473377723/None
+[2016-09-08 16:35:34,161 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:34,163 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:34,163 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:34,185 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:34,186 DEBUG Engine.blazemeter] KPI bulk buffer len: 18
+[2016-09-08 16:35:34,186 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:35:35,158 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:35,159 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:35,159 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:35,159 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:35,159 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 9 / 964 bytes (at speed 1048576)
+[2016-09-08 16:35:35,160 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:35:35,160 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377726
+[2016-09-08 16:35:35,162 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377724, 1473377725, 1473377726]
+[2016-09-08 16:35:35,162 DEBUG Engine.consolidator] Merging into 1473377724
+[2016-09-08 16:35:35,162 DEBUG Engine.consolidator] Merging 1473377724
+[2016-09-08 16:35:35,167 DEBUG Engine.consolidator] Processed datapoint: 1473377724/None
+[2016-09-08 16:35:35,167 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:35,169 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:35,169 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:35,190 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:35,190 DEBUG Engine.blazemeter] KPI bulk buffer len: 19
+[2016-09-08 16:35:35,194 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://data.blazemeter.com/submit.php?session_id=r-ext-57d1f5a743bb2&signature=d98c0b349bb2027952e615dc1984df3e&test_id=5267079&user_id=106819&pq=0&target=labels_bulk&update=1 {
+ "sourceID": 4399831440, 
+ "labels": [
+  {
+   "percentileHistogramLatency": [], 
+   "otherErrorsCount": 0, 
+   "failedEmbeddedResources": [], 
+   "intervals": [
+    {
+     "by": {
+      "std": 0, 
+      "min": 0, 
+      "max": 0, 
+      "sum": 0, 
+      
+[2016-09-08 16:35:36,504 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {"api_version":2,"error":null,"result":{"session":{"_id":"r-ext-57d1f5a743bb2","name":"Taurus_SN_Simple","statusCode":100,"status":"INITIALIZING"}}}
+[2016-09-08 16:35:36,504 DEBUG Engine.blazemeter.BlazeMeterUploader] Result: {u'status': u'INITIALIZING', u'_id': u'r-ext-57d1f5a743bb2', u'name': u'Taurus_SN_Simple', u'statusCode': 100}
+[2016-09-08 16:35:36,510 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f5a743bb2/files?signature=d98c0b349bb2027952e615dc1984df3e --===============4608695945615441000==
+Content-Disposition: file; name="file"; filename="Sids-MacBook-Pro-2.local.monitoring.json"
+Content-Type: application/json
+
+{
+ "kpis": {
+  "CPU": "CPU", 
+  "Network I/O": "Network I/O", 
+  "Memory": "Memory"
+ }, 
+
+[2016-09-08 16:35:38,071 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "Sids-MacBook-Pro-2.local.monitoring.json"
+    ]
+}
+[2016-09-08 16:35:38,072 DEBUG Engine] Iteration took 2.913 sec, sleeping for -1.913 sec...
+[2016-09-08 16:35:38,072 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x104c99110>
+[2016-09-08 16:35:38,072 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x104c99190>
+[2016-09-08 16:35:38,072 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:38,072 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:38,072 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 32 / 3428 bytes (at speed 1048576)
+[2016-09-08 16:35:38,073 DEBUG Engine.jmeter.JTLReader] Buffer len: 9
+[2016-09-08 16:35:38,073 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377727
+[2016-09-08 16:35:38,075 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377728
+[2016-09-08 16:35:38,077 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377729
+[2016-09-08 16:35:38,079 DEBUG Engine.consolidator] Consolidator buffer[5]: [1473377728, 1473377729, 1473377725, 1473377726, 1473377727]
+[2016-09-08 16:35:38,079 DEBUG Engine.consolidator] Merging into 1473377725
+[2016-09-08 16:35:38,079 DEBUG Engine.consolidator] Merging 1473377725
+[2016-09-08 16:35:38,083 DEBUG Engine.consolidator] Processed datapoint: 1473377725/None
+[2016-09-08 16:35:38,083 DEBUG Engine.consolidator] Merging into 1473377726
+[2016-09-08 16:35:38,083 DEBUG Engine.consolidator] Merging 1473377726
+[2016-09-08 16:35:38,086 DEBUG Engine.consolidator] Processed datapoint: 1473377726/None
+[2016-09-08 16:35:38,086 DEBUG Engine.consolidator] Merging into 1473377727
+[2016-09-08 16:35:38,086 DEBUG Engine.consolidator] Merging 1473377727
+[2016-09-08 16:35:38,089 DEBUG Engine.consolidator] Processed datapoint: 1473377727/None
+[2016-09-08 16:35:38,089 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x104c99f50>
+[2016-09-08 16:35:38,091 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1062d3990>
+[2016-09-08 16:35:38,091 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1062b9310>
+[2016-09-08 16:35:38,112 DEBUG Engine] Checking <bzt.modules.blazemeter.BlazeMeterUploader object at 0x106401950>
+[2016-09-08 16:35:38,112 DEBUG Engine.blazemeter] KPI bulk buffer len: 3
+[2016-09-08 16:35:38,112 DEBUG Engine] Iteration took 0.040 sec, sleeping for 0.960 sec...
+[2016-09-08 16:35:38,464 WARNING Engine] Please wait for graceful shutdown...
+[2016-09-08 16:35:38,471 INFO Engine] Shutting down...
+[2016-09-08 16:35:38,476 DEBUG Engine.local] Shutdown jmeter/quick-test
+[2016-09-08 16:35:39,480 INFO Engine.jmeter] Sending Shutdown command to JMeter on port 4445...
+[2016-09-08 16:35:44,501 INFO Engine.jmeter] Sending StopTestNow command to JMeter on port 4445...
+[2016-09-08 16:35:45,516 DEBUG Engine.jmeter] JMeter stopped on StopTestNow command
+[2016-09-08 16:35:45,517 DEBUG Engine.console] Restoring logging streams, [<logging.StreamHandler object at 0x104c63d90>]/{<logging.StreamHandler object at 0x104c63d90>: <open file '<stdout>', mode 'w' at 0x103e21150>}
+[2016-09-08 16:35:45,520 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.yml
+[2016-09-08 16:35:45,541 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.json
+[2016-09-08 16:35:45,544 DEBUG root] Caught exception in try: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/bzt/cli.py", line 156, in perform
+    self.engine.run()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 139, in run
+    self._wait()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 173, in _wait
+    time.sleep(delay)
+KeyboardInterrupt
+
+[2016-09-08 16:35:45,544 ERROR root] KeyboardInterrupt: 
+[2016-09-08 16:35:45,544 INFO Engine] Post-processing...
+[2016-09-08 16:35:45,545 DEBUG Engine.local] Post-process jmeter/quick-test
+[2016-09-08 16:35:45,545 DEBUG Engine] Add existing artifact (move=True): /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/modified_requests.jmx
+[2016-09-08 16:35:45,545 DEBUG Engine] No need to copy /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/modified_requests.jmx
+[2016-09-08 16:35:45,545 DEBUG Engine.jmeter.JTLErrorsReader] Opening /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/error.jtl
+[2016-09-08 16:35:45,548 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/kpi.jtl
+[2016-09-08 16:35:45,548 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 71 / 9813 bytes (at speed 1048576)
+[2016-09-08 16:35:45,549 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377726 into 1473377730
+[2016-09-08 16:35:45,549 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377724 into 1473377730
+[2016-09-08 16:35:45,549 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377727 into 1473377730
+[2016-09-08 16:35:45,549 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377723 into 1473377730
+[2016-09-08 16:35:45,549 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377723 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377727 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377725 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377727 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377725 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377726 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377724 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377725 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377724 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377727 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377726 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Putting sample 1473377725 into 1473377730
+[2016-09-08 16:35:45,550 DEBUG Engine.jmeter.JTLReader] Buffer len: 10
+[2016-09-08 16:35:45,551 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377730
+[2016-09-08 16:35:45,553 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377731
+[2016-09-08 16:35:45,555 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377732
+[2016-09-08 16:35:45,557 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377733
+[2016-09-08 16:35:45,560 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377734
+[2016-09-08 16:35:45,562 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377735
+[2016-09-08 16:35:45,564 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377736
+[2016-09-08 16:35:45,566 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377737
+[2016-09-08 16:35:45,568 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377738
+[2016-09-08 16:35:45,570 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377739
+[2016-09-08 16:35:45,572 DEBUG Engine.consolidator] Consolidator buffer[12]: [1473377728, 1473377729, 1473377730, 1473377731, 1473377732, 1473377733, 1473377734, 1473377735, 1473377736, 1473377737, 1473377738, 1473377739]
+[2016-09-08 16:35:45,572 DEBUG Engine.consolidator] Merging into 1473377728
+[2016-09-08 16:35:45,572 DEBUG Engine.consolidator] Merging 1473377728
+[2016-09-08 16:35:45,576 DEBUG Engine.consolidator] Processed datapoint: 1473377728/None
+[2016-09-08 16:35:45,576 DEBUG Engine.consolidator] Merging into 1473377729
+[2016-09-08 16:35:45,576 DEBUG Engine.consolidator] Merging 1473377729
+[2016-09-08 16:35:45,579 DEBUG Engine.consolidator] Processed datapoint: 1473377729/None
+[2016-09-08 16:35:45,579 DEBUG Engine.consolidator] Merging into 1473377730
+[2016-09-08 16:35:45,579 DEBUG Engine.consolidator] Merging 1473377730
+[2016-09-08 16:35:45,583 DEBUG Engine.consolidator] Processed datapoint: 1473377730/None
+[2016-09-08 16:35:45,583 DEBUG Engine.consolidator] Merging into 1473377731
+[2016-09-08 16:35:45,583 DEBUG Engine.consolidator] Merging 1473377731
+[2016-09-08 16:35:45,589 DEBUG Engine.consolidator] Processed datapoint: 1473377731/None
+[2016-09-08 16:35:45,589 DEBUG Engine.consolidator] Merging into 1473377732
+[2016-09-08 16:35:45,589 DEBUG Engine.consolidator] Merging 1473377732
+[2016-09-08 16:35:45,594 DEBUG Engine.consolidator] Processed datapoint: 1473377732/None
+[2016-09-08 16:35:45,594 DEBUG Engine.consolidator] Merging into 1473377733
+[2016-09-08 16:35:45,595 DEBUG Engine.consolidator] Merging 1473377733
+[2016-09-08 16:35:45,599 DEBUG Engine.consolidator] Processed datapoint: 1473377733/None
+[2016-09-08 16:35:45,599 DEBUG Engine.consolidator] Merging into 1473377734
+[2016-09-08 16:35:45,599 DEBUG Engine.consolidator] Merging 1473377734
+[2016-09-08 16:35:45,603 DEBUG Engine.consolidator] Processed datapoint: 1473377734/None
+[2016-09-08 16:35:45,603 DEBUG Engine.consolidator] Merging into 1473377735
+[2016-09-08 16:35:45,603 DEBUG Engine.consolidator] Merging 1473377735
+[2016-09-08 16:35:45,607 DEBUG Engine.consolidator] Processed datapoint: 1473377735/None
+[2016-09-08 16:35:45,607 DEBUG Engine.consolidator] Merging into 1473377736
+[2016-09-08 16:35:45,607 DEBUG Engine.consolidator] Merging 1473377736
+[2016-09-08 16:35:45,612 DEBUG Engine.consolidator] Processed datapoint: 1473377736/None
+[2016-09-08 16:35:45,612 DEBUG Engine.consolidator] Merging into 1473377737
+[2016-09-08 16:35:45,612 DEBUG Engine.consolidator] Merging 1473377737
+[2016-09-08 16:35:45,617 DEBUG Engine.consolidator] Processed datapoint: 1473377737/None
+[2016-09-08 16:35:45,617 DEBUG Engine.consolidator] Merging into 1473377738
+[2016-09-08 16:35:45,617 DEBUG Engine.consolidator] Merging 1473377738
+[2016-09-08 16:35:45,621 DEBUG Engine.consolidator] Processed datapoint: 1473377738/None
+[2016-09-08 16:35:45,621 DEBUG Engine.consolidator] Merging into 1473377739
+[2016-09-08 16:35:45,622 DEBUG Engine.consolidator] Merging 1473377739
+[2016-09-08 16:35:45,626 DEBUG Engine.consolidator] Processed datapoint: 1473377739/None
+[2016-09-08 16:35:45,626 INFO Engine.final_stats] Test duration: 0:00:43
+[2016-09-08 16:35:45,626 INFO Engine.final_stats] Samples count: 337, 8.01% failures
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Average times: total 3.533, latency 1.119, connect 0.036
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 0.0%: 1.307
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 50.0%: 2.468
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 90.0%: 4.107
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 95.0%: 14.063
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 99.0%: 20.066
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 99.9%: 21.277
+[2016-09-08 16:35:45,627 INFO Engine.final_stats] Percentile 100.0%: 21.277
+[2016-09-08 16:35:45,627 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2016-09-08 16:35:45,627 DEBUG Engine.blazemeter] KPI bulk buffer len in post-proc: 15
+[2016-09-08 16:35:45,630 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://data.blazemeter.com/submit.php?session_id=r-ext-57d1f5a743bb2&signature=d98c0b349bb2027952e615dc1984df3e&test_id=5267079&user_id=106819&pq=0&target=labels_bulk&update=1 {
+ "sourceID": 4399831440, 
+ "labels": [
+  {
+   "percentileHistogramLatency": [], 
+   "otherErrorsCount": 0, 
+   "failedEmbeddedResources": [], 
+   "intervals": [
+    {
+     "by": {
+      "std": 0, 
+      "min": 0, 
+      "max": 0, 
+      "sum": 0, 
+      
+[2016-09-08 16:35:46,212 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {"api_version":2,"error":null,"result":{"session":{"_id":"r-ext-57d1f5a743bb2","name":"Taurus_SN_Simple","statusCode":100,"status":"INITIALIZING"}}}
+[2016-09-08 16:35:46,213 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f5a743bb2/files?signature=d98c0b349bb2027952e615dc1984df3e --===============8139230435901138856==
+Content-Disposition: file; name="file"; filename="sample.jtl.blazemeter.summery.json"
+Content-Type: application/json
+
+{
+ "timestamp": 1473377739, 
+ "summery": {
+  "labels": [
+   {
+    "count": 109, 
+    "embeddedR
+[2016-09-08 16:35:46,878 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "sample.jtl.blazemeter.summery.json"
+    ]
+}
+[2016-09-08 16:35:46,885 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f5a743bb2/files?signature=d98c0b349bb2027952e615dc1984df3e --===============8085102724996785996==
+Content-Disposition: file; name="file"; filename="Sids-MacBook-Pro-2.local.monitoring.json"
+Content-Type: application/json
+
+{
+ "kpis": {
+  "CPU": "CPU", 
+  "Network I/O": "Network I/O", 
+  "Memory": "Memory"
+ }, 
+
+[2016-09-08 16:35:47,876 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "Sids-MacBook-Pro-2.local.monitoring.json"
+    ]
+}
+[2016-09-08 16:35:47,884 INFO Engine.blazemeter] Uploading all artifacts as artifacts.zip ...
+[2016-09-08 16:35:47,884 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f5a743bb2/files?signature=d98c0b349bb2027952e615dc1984df3e --===============5484685772909349796==
+Content-Disposition: file; name="file"; filename="artifacts.zip"
+Content-Type: application/zip
+
+PK    vÑ(I|KŸÕ©  õ     effective.json•Ÿn∑ˆ›_!ÀEI…∂úÿyks”¥A‹µÙ"(jÜ#Q‚ß\l9Å˚Ì=‹Üú—f‡˙A¶»≥ÒÏá˙~2+™5kj¸n
+[2016-09-08 16:35:48,779 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "artifacts.zip"
+    ]
+}
+[2016-09-08 16:35:48,779 INFO Engine.blazemeter] Uploading /Users/sidnarang/Desktop/justsimpledemo/jenkins/bzt.log
+[2016-09-08 16:35:48,779 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f5a743bb2/files?signature=d98c0b349bb2027952e615dc1984df3e --===============3990205717824349620==
+Content-Disposition: file; name="file"; filename="/Users/sidnarang/Desktop/justsimpledemo/jenkinsbzt.log"
+Content-Type: text/plain
+
+[2016-09-08 16:35:00,026 INFO root] Taurus CLI Tool v1.6.8
+[2016-09-08 16:35:00,0
+[2016-09-08 16:35:50,463 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "jenkinsbzt.log"
+    ]
+}
+[2016-09-08 16:35:50,463 DEBUG Engine.blazemeter] Set last check time to: 1473377701.01
+[2016-09-08 16:35:50,463 INFO Engine.blazemeter.BlazeMeterUploader] Ending data feeding...
+[2016-09-08 16:35:50,464 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f5a743bb2/terminate None
+[2016-09-08 16:35:51,050 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "success": true,
+        "session": {
+            "id": "r-ext-57d1f5a743bb2",
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "offset": 0,
+            "st
+[2016-09-08 16:35:51,051 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f5a743bb2 None
+[2016-09-08 16:35:51,524 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f5a743bb2",
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 140,
+        "status": "ENDED",
+        "ended": 147337
+[2016-09-08 16:35:51,524 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PUT https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f5a743bb2 {
+ "note": "KeyboardInterrupt:"
+}
+[2016-09-08 16:35:52,012 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f5a743bb2",
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 140,
+        "status": "ENDED",
+        "ended": 147337
+[2016-09-08 16:35:52,012 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/masters/15550693 None
+[2016-09-08 16:35:52,472 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": 15550693,
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "ended": 1473377750,
+        "usage": 1,
+        "maxUsers": 54,
+        "created": 1473377703,
+       
+[2016-09-08 16:35:52,472 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PUT https://a.blazemeter.com/api/latest/masters/15550693 {
+ "note": "KeyboardInterrupt:"
+}
+[2016-09-08 16:35:52,934 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": 15550693,
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "ended": 1473377750,
+        "usage": 1,
+        "maxUsers": 54,
+        "created": 1473377703,
+       
+[2016-09-08 16:35:52,934 INFO Engine.blazemeter] Online report link: https://a.blazemeter.com/app/#reports/15550693
+[2016-09-08 16:35:52,936 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.yml
+[2016-09-08 16:35:52,956 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/effective.json
+[2016-09-08 16:35:52,957 INFO root] Artifacts dir: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578
+[2016-09-08 16:35:52,957 WARNING root] Done performing with code: 1
+[2016-09-08 16:35:52,957 DEBUG Engine] Add existing artifact (move=True): bzt.log
+[2016-09-08 16:35:52,957 DEBUG Engine] Moving bzt.log to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-35-00.433578/bzt.log

@@ -1,0 +1,906 @@
+[2016-09-08 16:27:29,342 INFO root] Taurus CLI Tool v1.6.8
+[2016-09-08 16:27:29,343 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': 'bzt.log', 'option': None, 'aliases': []}
+[2016-09-08 16:27:29,343 DEBUG root] Python: CPython 2.7.10
+[2016-09-08 16:27:29,343 DEBUG root] OS: ('Darwin', 'Sids-MacBook-Pro-2.local', '14.5.0', 'Darwin Kernel Version 14.5.0: Mon Aug 29 21:14:16 PDT 2016; root:xnu-2782.50.6~1/RELEASE_X86_64', 'x86_64', 'i386')
+[2016-09-08 16:27:29,343 DEBUG root] Adding JMX shorthand config for: ['_blazedemo_v5.jmx']
+[2016-09-08 16:27:29,346 DEBUG root] Dumping JSON config into /var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json
+[2016-09-08 16:27:29,346 INFO root] Starting with configs: ['/var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json']
+[2016-09-08 16:27:29,346 INFO Engine] Configuring...
+[2016-09-08 16:27:29,346 DEBUG Engine] Reading machine configs from: /etc/bzt.d
+[2016-09-08 16:27:29,346 INFO Engine] No personal config: /Users/sidnarang/.bzt-rc
+[2016-09-08 16:27:29,347 DEBUG Engine.Configuration] Configs: ['/etc/bzt.d/10-base.json', '/etc/bzt.d/99-installID.yml']
+[2016-09-08 16:27:29,347 DEBUG Engine.Configuration] Reading /etc/bzt.d/10-base.json as JSON
+[2016-09-08 16:27:29,347 DEBUG Engine.Configuration] Reading /etc/bzt.d/99-installID.yml as YAML
+[2016-09-08 16:27:29,348 DEBUG Engine.Configuration] Configs: ['/var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json']
+[2016-09-08 16:27:29,348 DEBUG Engine.Configuration] Reading /var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json as JSON
+[2016-09-08 16:27:29,348 DEBUG root] Configs: ['/var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json']
+[2016-09-08 16:27:29,348 DEBUG root] Reading /var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json as JSON
+[2016-09-08 16:27:29,348 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.6.8&installID=c8843905-b92c-4f70-b648-47b394eef70f
+[2016-09-08 16:27:29,731 DEBUG Engine] Result: {"latest":"1.6.8","needsUpgrade":false}
+[2016-09-08 16:27:29,732 DEBUG Engine] Installation is up-to-date
+[2016-09-08 16:27:29,732 INFO Engine] Artifacts dir: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384
+[2016-09-08 16:27:29,732 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective
+[2016-09-08 16:27:29,735 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.yml
+[2016-09-08 16:27:29,751 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.json
+[2016-09-08 16:27:29,752 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/merged.yml
+[2016-09-08 16:27:29,752 DEBUG root] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/merged.yml
+[2016-09-08 16:27:29,752 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/merged.json
+[2016-09-08 16:27:29,753 DEBUG root] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/merged.json
+[2016-09-08 16:27:29,753 DEBUG Engine] Add existing artifact (move=False): /var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json
+[2016-09-08 16:27:29,753 DEBUG Engine] Copying /var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmx_XX3d9m.json to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/jmx_XX3d9m.json
+[2016-09-08 16:27:29,753 INFO Engine] Preparing...
+[2016-09-08 16:27:29,754 DEBUG Engine] Module config: consolidator defaultdict(None, {u'ignore-labels': [u'ignore'], u'percentiles': [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0], u'class': u'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2016-09-08 16:27:29,754 DEBUG root] Importing module: bzt.modules.aggregator
+[2016-09-08 16:27:29,755 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/Library/Python/2.7/site-packages/bzt/modules/aggregator.pyc'>
+[2016-09-08 16:27:29,755 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2016-09-08 16:27:29,755 DEBUG Engine] Module config: monitoring defaultdict(None, {u'class': u'bzt.modules.monitoring.Monitoring'})
+[2016-09-08 16:27:29,755 DEBUG root] Importing module: bzt.modules.monitoring
+[2016-09-08 16:27:29,771 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/Library/Python/2.7/site-packages/bzt/modules/monitoring.pyc'>
+[2016-09-08 16:27:29,772 DEBUG Engine] Module config: local defaultdict(None, {u'class': u'bzt.modules.provisioning.Local'})
+[2016-09-08 16:27:29,772 DEBUG root] Importing module: bzt.modules.provisioning
+[2016-09-08 16:27:29,772 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/Library/Python/2.7/site-packages/bzt/modules/provisioning.pyc'>
+[2016-09-08 16:27:29,772 DEBUG Engine] Module config: jmeter defaultdict(None, {u'path': u'~/.bzt/jmeter-taurus/', u'plugins': [u'jpgc-casutg', u'jpgc-dummy', u'jpgc-ffw', u'jpgc-fifo', u'jpgc-functions', u'jpgc-json', u'jpgc-perfmon', u'jpgc-prmctl', u'jpgc-tst'], u'properties': defaultdict(None, {u'jmeter.save.saveservice.autoflush': u'true', u'jmeterengine.force.system.exit': u'true', u'jmeter.save.saveservice.connect_time': u'true', u'summariser.name': u'', u'mode': u'Stripped'}), u'class': u'bzt.modules.jmeter.JMeterExecutor'})
+[2016-09-08 16:27:29,772 DEBUG root] Importing module: bzt.modules.jmeter
+[2016-09-08 16:27:29,778 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/Library/Python/2.7/site-packages/bzt/modules/jmeter.pyc'>
+[2016-09-08 16:27:29,778 DEBUG Engine.local] Preparing executor: jmeter/4572295440
+[2016-09-08 16:27:29,778 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/jmeter.log
+[2016-09-08 16:27:29,778 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2016-09-08 16:27:29,778 DEBUG Engine.jmeter] Port 4445 is free
+[2016-09-08 16:27:29,778 DEBUG Engine.jmeter] Using port 4445 for management
+[2016-09-08 16:27:29,779 DEBUG Engine.jmeter.JavaVM] Trying: ['java', '-version']
+[2016-09-08 16:27:29,852 DEBUG Engine.jmeter.JavaVM] JavaVM output: java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+
+[2016-09-08 16:27:29,852 DEBUG Engine.jmeter.TclLibrary] We don't need to check tcl library on this platform
+[2016-09-08 16:27:29,852 DEBUG Engine.jmeter.JMeter] Trying jmeter: /Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh
+[2016-09-08 16:27:29,853 DEBUG bzt.utils] Executing shell: [u'/Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh', '-j', '/var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmeterMsXAHRlog', '--version']
+[2016-09-08 16:27:30,136 DEBUG Engine.jmeter.JMeter] JMeter check: Copyright (c) 1998-2015 The Apache Software Foundation
+Version 2.13 r1665067
+ / None
+[2016-09-08 16:27:30,137 DEBUG Engine.jmeter] Extract _blazedemo_v5.jmx into scenarios
+[2016-09-08 16:27:30,138 DEBUG Engine.jmeter] Load: LoadSpec(concurrency=None, throughput=None, ramp_up=None, hold=0, iterations=None, duration=0, steps=None)
+[2016-09-08 16:27:30,139 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:30,140 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:30,140 DEBUG Engine.jmeter] Enforcing parent sample for transaction controller
+[2016-09-08 16:27:30,140 DEBUG JMX] Saving JMX to: modified__blazedemo_v5.jmx
+[2016-09-08 16:27:30,141 DEBUG Engine.jmeter] Additional properties: defaultdict(None, {u'jmeter.save.saveservice.autoflush': u'true', u'jmeter.save.saveservice.connect_time': u'true', 'user.classpath': '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384', u'summariser.name': u'', u'jmeterengine.force.system.exit': u'true', 'jmeter.save.saveservice.timestamp_format': 'ms', u'mode': u'Stripped', 'jmeterengine.nongui.maxport': 4445, 'jmeterengine.nongui.port': 4445})
+[2016-09-08 16:27:30,141 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/jmeter-bzt.properties
+[2016-09-08 16:27:30,141 DEBUG Engine] Module config: final_stats defaultdict(None, {u'class': u'bzt.modules.reporting.FinalStatus'})
+[2016-09-08 16:27:30,142 DEBUG root] Importing module: bzt.modules.reporting
+[2016-09-08 16:27:30,144 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/Library/Python/2.7/site-packages/bzt/modules/reporting.pyc'>
+[2016-09-08 16:27:30,144 DEBUG Engine] Module config: console defaultdict(None, {u'disable': False, u'class': u'bzt.modules.console.ConsoleStatusReporter'})
+[2016-09-08 16:27:30,144 DEBUG root] Importing module: bzt.modules.console
+[2016-09-08 16:27:30,144 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/Library/Python/2.7/site-packages/bzt/modules/console.pyc'>
+[2016-09-08 16:27:30,150 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.yml
+[2016-09-08 16:27:30,164 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.json
+[2016-09-08 16:27:30,164 INFO Engine] Starting...
+[2016-09-08 16:27:30,164 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:30,164 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:30,164 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:30,165 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:30,165 INFO Engine.console] Waiting for results...
+[2016-09-08 16:27:30,165 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:30,165 DEBUG Engine.local] Delay setup: 0(start-at) + 0(delay) = 0
+[2016-09-08 16:27:30,166 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.yml
+[2016-09-08 16:27:30,183 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.json
+[2016-09-08 16:27:30,184 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:30,184 DEBUG bzt.utils] Executing shell: [u'/Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh', '-n', '-t', u'/Users/sidnarang/Desktop/justsimpledemo/jenkins/modified__blazedemo_v5.jmx', '-j', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/jmeter.log', '-q', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/jmeter-bzt.properties']
+[2016-09-08 16:27:30,188 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:30,188 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:30,188 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] File not appeared yet: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:30,188 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] No data to start reading yet
+[2016-09-08 16:27:30,188 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:27:30,188 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:27:30,188 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:30,394 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:30,394 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:30,394 DEBUG Engine.console] Overriding logging streams
+[2016-09-08 16:27:30,394 DEBUG Engine.console] Redirected logging streams, [<logging.StreamHandler object at 0x10f275d90>]/{<logging.StreamHandler object at 0x10f275d90>: <open file '<stdout>', mode 'w' at 0x10e433150>}
+[2016-09-08 16:27:30,395 INFO Engine.console] Waiting for finish...
+[2016-09-08 16:27:30,424 DEBUG Engine] Iteration took 0.240 sec, sleeping for 0.760 sec...
+[2016-09-08 16:27:31,190 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:31,190 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:31,190 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:31,190 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Opening file: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:31,190 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:31,190 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 119 bytes (at speed 1048576)
+[2016-09-08 16:27:31,193 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Analyzed header line: ['timeStamp', 'elapsed', 'label', 'responseCode', 'responseMessage', 'threadName', 'success', 'grpThreads', 'allThreads', 'Latency', 'Hostname', 'Connect']
+[2016-09-08 16:27:31,193 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:27:31,193 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:27:31,193 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:31,195 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:31,195 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:31,200 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:32,194 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:32,194 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:32,194 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:32,194 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:32,195 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:32,195 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:27:32,195 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:27:32,195 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:32,197 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:32,197 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:32,203 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:27:33,195 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:33,195 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:33,195 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:33,195 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:33,195 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:33,196 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:27:33,196 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:27:33,196 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:33,198 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:33,198 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:33,204 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:27:34,200 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:34,200 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:34,201 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:34,201 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:34,201 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 93 bytes (at speed 1048576)
+[2016-09-08 16:27:34,201 DEBUG Engine.jmeter.JTLReader] Buffer len: 1
+[2016-09-08 16:27:34,201 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:27:34,201 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:34,203 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:34,203 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:34,210 DEBUG Engine] Iteration took 0.010 sec, sleeping for 0.990 sec...
+[2016-09-08 16:27:35,202 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:35,202 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:35,202 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:35,202 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:35,203 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:35,203 DEBUG Engine.jmeter.JTLReader] Buffer len: 1
+[2016-09-08 16:27:35,203 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:27:35,203 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:35,204 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:35,204 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:35,209 DEBUG Engine] Iteration took 0.007 sec, sleeping for 0.993 sec...
+[2016-09-08 16:27:36,207 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:36,207 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:36,207 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:36,207 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:36,207 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 93 bytes (at speed 1048576)
+[2016-09-08 16:27:36,207 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:36,208 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377251
+[2016-09-08 16:27:36,208 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377251]
+[2016-09-08 16:27:36,208 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:36,209 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:36,209 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:36,214 DEBUG Engine] Iteration took 0.007 sec, sleeping for 0.993 sec...
+[2016-09-08 16:27:37,207 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:37,207 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:37,207 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:37,208 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:37,208 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:37,208 DEBUG Engine.jmeter.JTLReader] Buffer len: 1
+[2016-09-08 16:27:37,208 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 4s
+[2016-09-08 16:27:37,213 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377251]
+[2016-09-08 16:27:37,213 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:37,215 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:37,215 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:37,220 DEBUG Engine] Iteration took 0.013 sec, sleeping for 0.987 sec...
+[2016-09-08 16:27:38,211 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:38,211 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:38,211 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:38,211 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:38,211 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:27:38,211 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:38,212 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377251]
+[2016-09-08 16:27:38,212 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:38,213 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:38,213 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:38,218 DEBUG Engine] Iteration took 0.007 sec, sleeping for 0.993 sec...
+[2016-09-08 16:27:39,213 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:39,213 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:39,213 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:39,213 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:39,213 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:39,214 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:39,214 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377251]
+[2016-09-08 16:27:39,214 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:39,216 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:39,216 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:39,222 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:27:40,213 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:40,213 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:40,213 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:40,214 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:40,214 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:40,214 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:40,214 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377251]
+[2016-09-08 16:27:40,214 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:40,216 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:40,216 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:40,223 DEBUG Engine] Iteration took 0.010 sec, sleeping for 0.990 sec...
+[2016-09-08 16:27:41,218 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:41,219 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:41,219 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:41,219 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:41,219 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:41,219 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:41,219 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377251]
+[2016-09-08 16:27:41,219 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:41,221 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:41,222 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:41,228 DEBUG Engine] Iteration took 0.010 sec, sleeping for 0.990 sec...
+[2016-09-08 16:27:42,223 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:42,224 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:42,224 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:42,224 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:42,224 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 99 bytes (at speed 1048576)
+[2016-09-08 16:27:42,224 DEBUG Engine.jmeter.JTLReader] Buffer len: 3
+[2016-09-08 16:27:42,224 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377253
+[2016-09-08 16:27:42,226 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377251, 1473377253]
+[2016-09-08 16:27:42,226 DEBUG Engine.consolidator] Merging into 1473377251
+[2016-09-08 16:27:42,226 DEBUG Engine.consolidator] Merging 1473377251
+[2016-09-08 16:27:42,229 DEBUG Engine.consolidator] Processed datapoint: 1473377251/None
+[2016-09-08 16:27:42,229 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:42,231 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:42,231 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:42,248 DEBUG Engine] Iteration took 0.024 sec, sleeping for 0.976 sec...
+[2016-09-08 16:27:43,228 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:43,228 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:43,228 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:43,228 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:43,228 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:43,228 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:43,228 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377253]
+[2016-09-08 16:27:43,229 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:43,231 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:43,231 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:43,241 DEBUG Engine] Iteration took 0.014 sec, sleeping for 0.986 sec...
+[2016-09-08 16:27:44,230 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:44,230 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:44,230 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:44,231 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:44,231 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 92 bytes (at speed 1048576)
+[2016-09-08 16:27:44,231 DEBUG Engine.jmeter.JTLReader] Buffer len: 3
+[2016-09-08 16:27:44,231 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377255
+[2016-09-08 16:27:44,232 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377257
+[2016-09-08 16:27:44,234 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377257, 1473377253, 1473377255]
+[2016-09-08 16:27:44,234 DEBUG Engine.consolidator] Merging into 1473377253
+[2016-09-08 16:27:44,234 DEBUG Engine.consolidator] Merging 1473377253
+[2016-09-08 16:27:44,237 DEBUG Engine.consolidator] Processed datapoint: 1473377253/None
+[2016-09-08 16:27:44,237 DEBUG Engine.consolidator] Merging into 1473377255
+[2016-09-08 16:27:44,237 DEBUG Engine.consolidator] Merging 1473377255
+[2016-09-08 16:27:44,240 DEBUG Engine.consolidator] Processed datapoint: 1473377255/None
+[2016-09-08 16:27:44,240 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:44,241 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:44,241 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:44,257 DEBUG Engine] Iteration took 0.027 sec, sleeping for 0.973 sec...
+[2016-09-08 16:27:45,235 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:45,235 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:45,235 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:45,235 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:45,236 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 92 bytes (at speed 1048576)
+[2016-09-08 16:27:45,236 DEBUG Engine.jmeter.JTLReader] Buffer len: 2
+[2016-09-08 16:27:45,236 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 7s
+[2016-09-08 16:27:45,244 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:45,244 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:45,245 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:45,245 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:45,251 DEBUG Engine] Iteration took 0.017 sec, sleeping for 0.983 sec...
+[2016-09-08 16:27:46,237 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:46,237 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:46,237 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:46,237 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:46,238 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:27:46,238 DEBUG Engine.jmeter.JTLReader] Buffer len: 3
+[2016-09-08 16:27:46,238 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:46,238 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:46,240 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:46,240 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:46,250 DEBUG Engine] Iteration took 0.013 sec, sleeping for 0.987 sec...
+[2016-09-08 16:27:47,242 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:47,243 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:47,243 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:47,243 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:47,243 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:27:47,243 DEBUG Engine.jmeter.JTLReader] Buffer len: 4
+[2016-09-08 16:27:47,243 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:47,243 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:47,245 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:47,246 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:47,253 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:48,246 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:48,247 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:48,247 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:48,247 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:48,247 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:27:48,247 DEBUG Engine.jmeter.JTLReader] Buffer len: 5
+[2016-09-08 16:27:48,247 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:48,248 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:48,250 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:48,250 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:48,258 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:49,252 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:49,252 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:49,252 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:49,252 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:49,252 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:27:49,253 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:27:49,253 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:49,253 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:49,255 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:49,255 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:49,263 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:50,257 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:50,257 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:50,257 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:50,257 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:50,258 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:50,258 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:27:50,258 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:50,258 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:50,260 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:50,260 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:50,268 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:51,257 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:51,257 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:51,258 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:51,258 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:51,258 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:51,258 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:27:51,258 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:51,258 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:51,260 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:51,260 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:51,268 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:52,258 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:52,258 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:52,258 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:52,258 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:52,258 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 98 bytes (at speed 1048576)
+[2016-09-08 16:27:52,259 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:27:52,259 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377257]
+[2016-09-08 16:27:52,259 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:52,261 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:52,261 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:52,269 DEBUG Engine] Iteration took 0.012 sec, sleeping for 0.988 sec...
+[2016-09-08 16:27:53,263 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:53,263 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:53,263 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:53,264 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:53,264 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 98 bytes (at speed 1048576)
+[2016-09-08 16:27:53,264 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:27:53,264 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377262
+[2016-09-08 16:27:53,266 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377257, 1473377262]
+[2016-09-08 16:27:53,266 DEBUG Engine.consolidator] Merging into 1473377257
+[2016-09-08 16:27:53,266 DEBUG Engine.consolidator] Merging 1473377257
+[2016-09-08 16:27:53,270 DEBUG Engine.consolidator] Processed datapoint: 1473377257/None
+[2016-09-08 16:27:53,270 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:53,271 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:53,271 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:53,289 DEBUG Engine] Iteration took 0.026 sec, sleeping for 0.974 sec...
+[2016-09-08 16:27:54,268 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:54,269 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:54,269 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:54,269 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:54,269 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:27:54,269 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:27:54,269 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377262]
+[2016-09-08 16:27:54,269 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:54,271 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:54,272 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:54,280 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:27:55,273 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:55,273 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:55,274 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:55,274 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:55,274 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 92 bytes (at speed 1048576)
+[2016-09-08 16:27:55,274 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:27:55,274 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377263
+[2016-09-08 16:27:55,275 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377264
+[2016-09-08 16:27:55,275 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377265
+[2016-09-08 16:27:55,276 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377264, 1473377265, 1473377262, 1473377263]
+[2016-09-08 16:27:55,276 DEBUG Engine.consolidator] Merging into 1473377262
+[2016-09-08 16:27:55,276 DEBUG Engine.consolidator] Merging 1473377262
+[2016-09-08 16:27:55,279 DEBUG Engine.consolidator] Processed datapoint: 1473377262/None
+[2016-09-08 16:27:55,279 DEBUG Engine.consolidator] Merging into 1473377263
+[2016-09-08 16:27:55,279 DEBUG Engine.consolidator] Merging 1473377263
+[2016-09-08 16:27:55,281 DEBUG Engine.consolidator] Processed datapoint: 1473377263/None
+[2016-09-08 16:27:55,282 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:55,283 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:55,283 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:55,302 DEBUG Engine] Iteration took 0.028 sec, sleeping for 0.972 sec...
+[2016-09-08 16:27:56,279 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:56,279 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:56,279 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:56,279 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:56,279 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 93 bytes (at speed 1048576)
+[2016-09-08 16:27:56,279 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:27:56,280 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377266
+[2016-09-08 16:27:56,281 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377264, 1473377265, 1473377266]
+[2016-09-08 16:27:56,281 DEBUG Engine.consolidator] Merging into 1473377264
+[2016-09-08 16:27:56,282 DEBUG Engine.consolidator] Merging 1473377264
+[2016-09-08 16:27:56,286 DEBUG Engine.consolidator] Processed datapoint: 1473377264/None
+[2016-09-08 16:27:56,286 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:56,287 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:56,287 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:56,318 DEBUG Engine] Iteration took 0.040 sec, sleeping for 0.960 sec...
+[2016-09-08 16:27:57,283 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:57,283 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:57,283 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:57,283 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:57,283 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 186 bytes (at speed 1048576)
+[2016-09-08 16:27:57,284 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:27:57,284 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377267
+[2016-09-08 16:27:57,286 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377268
+[2016-09-08 16:27:57,287 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377265, 1473377266, 1473377267, 1473377268]
+[2016-09-08 16:27:57,287 DEBUG Engine.consolidator] Merging into 1473377265
+[2016-09-08 16:27:57,287 DEBUG Engine.consolidator] Merging 1473377265
+[2016-09-08 16:27:57,291 DEBUG Engine.consolidator] Processed datapoint: 1473377265/None
+[2016-09-08 16:27:57,291 DEBUG Engine.consolidator] Merging into 1473377266
+[2016-09-08 16:27:57,291 DEBUG Engine.consolidator] Merging 1473377266
+[2016-09-08 16:27:57,296 DEBUG Engine.consolidator] Processed datapoint: 1473377266/None
+[2016-09-08 16:27:57,296 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:57,298 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:57,298 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:57,321 DEBUG Engine] Iteration took 0.038 sec, sleeping for 0.962 sec...
+[2016-09-08 16:27:58,286 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:58,286 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:58,286 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:58,286 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:58,286 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 93 bytes (at speed 1048576)
+[2016-09-08 16:27:58,287 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:27:58,287 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377269
+[2016-09-08 16:27:58,289 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377267, 1473377268, 1473377269]
+[2016-09-08 16:27:58,289 DEBUG Engine.consolidator] Merging into 1473377267
+[2016-09-08 16:27:58,289 DEBUG Engine.consolidator] Merging 1473377267
+[2016-09-08 16:27:58,293 DEBUG Engine.consolidator] Processed datapoint: 1473377267/None
+[2016-09-08 16:27:58,293 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:58,294 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:58,294 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:58,312 DEBUG Engine] Iteration took 0.027 sec, sleeping for 0.973 sec...
+[2016-09-08 16:27:59,287 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:27:59,287 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:27:59,287 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:27:59,288 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:27:59,288 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 187 bytes (at speed 1048576)
+[2016-09-08 16:27:59,288 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:27:59,288 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377268, 1473377269]
+[2016-09-08 16:27:59,288 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:27:59,290 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:27:59,290 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:27:59,298 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:28:00,292 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:00,292 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:00,292 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:00,292 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:00,292 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:28:00,292 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:00,293 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377268, 1473377269]
+[2016-09-08 16:28:00,293 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:00,295 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:00,295 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:00,303 DEBUG Engine] Iteration took 0.011 sec, sleeping for 0.989 sec...
+[2016-09-08 16:28:01,296 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:01,296 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:01,297 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:01,297 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:01,297 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:28:01,297 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:01,297 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377272
+[2016-09-08 16:28:01,299 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377268, 1473377269, 1473377272]
+[2016-09-08 16:28:01,299 DEBUG Engine.consolidator] Merging into 1473377268
+[2016-09-08 16:28:01,299 DEBUG Engine.consolidator] Merging 1473377268
+[2016-09-08 16:28:01,303 DEBUG Engine.consolidator] Processed datapoint: 1473377268/None
+[2016-09-08 16:28:01,303 DEBUG Engine.consolidator] Merging into 1473377269
+[2016-09-08 16:28:01,303 DEBUG Engine.consolidator] Merging 1473377269
+[2016-09-08 16:28:01,306 DEBUG Engine.consolidator] Processed datapoint: 1473377269/None
+[2016-09-08 16:28:01,307 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:01,308 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:01,308 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:01,325 DEBUG Engine] Iteration took 0.029 sec, sleeping for 0.971 sec...
+[2016-09-08 16:28:01,962 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:01,962 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:01,962 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:01,962 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:01,962 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:28:01,963 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:01,963 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377272]
+[2016-09-08 16:28:01,963 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:01,964 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:01,964 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:01,971 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:28:02,962 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:02,963 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:02,963 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:02,963 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:02,963 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 98 bytes (at speed 1048576)
+[2016-09-08 16:28:02,963 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:02,963 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377272]
+[2016-09-08 16:28:02,963 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:02,966 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:02,966 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:02,986 DEBUG Engine] Iteration took 0.023 sec, sleeping for 0.977 sec...
+[2016-09-08 16:28:03,963 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:03,963 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:03,963 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:03,964 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:03,964 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 98 bytes (at speed 1048576)
+[2016-09-08 16:28:03,964 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:03,964 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377273
+[2016-09-08 16:28:03,966 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377272, 1473377273]
+[2016-09-08 16:28:03,966 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:03,967 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:03,967 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:03,974 DEBUG Engine] Iteration took 0.012 sec, sleeping for 0.988 sec...
+[2016-09-08 16:28:04,964 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:04,964 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:04,964 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:04,964 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:04,964 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2016-09-08 16:28:04,964 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:04,965 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377272, 1473377273]
+[2016-09-08 16:28:04,965 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:04,966 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:04,966 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:04,973 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:28:05,964 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:05,964 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:05,965 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:05,965 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:05,965 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 191 bytes (at speed 1048576)
+[2016-09-08 16:28:05,965 DEBUG Engine.jmeter.JTLReader] Buffer len: 9
+[2016-09-08 16:28:05,965 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377274
+[2016-09-08 16:28:05,966 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377275
+[2016-09-08 16:28:05,967 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377276
+[2016-09-08 16:28:05,968 DEBUG Engine.consolidator] Consolidator buffer[5]: [1473377272, 1473377273, 1473377274, 1473377275, 1473377276]
+[2016-09-08 16:28:05,968 DEBUG Engine.consolidator] Merging into 1473377272
+[2016-09-08 16:28:05,968 DEBUG Engine.consolidator] Merging 1473377272
+[2016-09-08 16:28:05,971 DEBUG Engine.consolidator] Processed datapoint: 1473377272/None
+[2016-09-08 16:28:05,971 DEBUG Engine.consolidator] Merging into 1473377273
+[2016-09-08 16:28:05,971 DEBUG Engine.consolidator] Merging 1473377273
+[2016-09-08 16:28:05,974 DEBUG Engine.consolidator] Processed datapoint: 1473377273/None
+[2016-09-08 16:28:05,974 DEBUG Engine.consolidator] Merging into 1473377274
+[2016-09-08 16:28:05,974 DEBUG Engine.consolidator] Merging 1473377274
+[2016-09-08 16:28:05,977 DEBUG Engine.consolidator] Processed datapoint: 1473377274/None
+[2016-09-08 16:28:05,977 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:05,978 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:05,978 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:05,996 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:28:06,966 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:06,967 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:06,967 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:06,967 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:06,967 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 92 bytes (at speed 1048576)
+[2016-09-08 16:28:06,967 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:06,967 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377277
+[2016-09-08 16:28:06,969 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377275, 1473377276, 1473377277]
+[2016-09-08 16:28:06,970 DEBUG Engine.consolidator] Merging into 1473377275
+[2016-09-08 16:28:06,970 DEBUG Engine.consolidator] Merging 1473377275
+[2016-09-08 16:28:06,973 DEBUG Engine.consolidator] Processed datapoint: 1473377275/None
+[2016-09-08 16:28:06,973 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:06,975 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:06,975 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:06,996 DEBUG Engine] Iteration took 0.030 sec, sleeping for 0.970 sec...
+[2016-09-08 16:28:07,968 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:07,969 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:07,969 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:07,969 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:07,969 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 93 bytes (at speed 1048576)
+[2016-09-08 16:28:07,969 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:07,969 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377278
+[2016-09-08 16:28:07,970 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377276, 1473377277, 1473377278]
+[2016-09-08 16:28:07,970 DEBUG Engine.consolidator] Merging into 1473377276
+[2016-09-08 16:28:07,970 DEBUG Engine.consolidator] Merging 1473377276
+[2016-09-08 16:28:07,974 DEBUG Engine.consolidator] Processed datapoint: 1473377276/None
+[2016-09-08 16:28:07,974 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:07,975 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:07,975 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:07,993 DEBUG Engine] Iteration took 0.024 sec, sleeping for 0.976 sec...
+[2016-09-08 16:28:08,973 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:08,974 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:08,974 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:08,974 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:08,974 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 186 bytes (at speed 1048576)
+[2016-09-08 16:28:08,974 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:08,974 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377279
+[2016-09-08 16:28:08,976 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377277, 1473377278, 1473377279]
+[2016-09-08 16:28:08,976 DEBUG Engine.consolidator] Merging into 1473377277
+[2016-09-08 16:28:08,976 DEBUG Engine.consolidator] Merging 1473377277
+[2016-09-08 16:28:08,980 DEBUG Engine.consolidator] Processed datapoint: 1473377277/None
+[2016-09-08 16:28:08,980 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:08,981 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:08,981 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:09,002 DEBUG Engine] Iteration took 0.029 sec, sleeping for 0.971 sec...
+[2016-09-08 16:28:09,973 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:09,974 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:09,974 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:09,974 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:09,974 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 186 bytes (at speed 1048576)
+[2016-09-08 16:28:09,974 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:09,974 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377280
+[2016-09-08 16:28:09,975 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377280, 1473377278, 1473377279]
+[2016-09-08 16:28:09,975 DEBUG Engine.consolidator] Merging into 1473377278
+[2016-09-08 16:28:09,975 DEBUG Engine.consolidator] Merging 1473377278
+[2016-09-08 16:28:09,978 DEBUG Engine.consolidator] Processed datapoint: 1473377278/None
+[2016-09-08 16:28:09,978 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:09,980 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:09,980 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:09,998 DEBUG Engine] Iteration took 0.025 sec, sleeping for 0.975 sec...
+[2016-09-08 16:28:10,979 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:10,979 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:10,979 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:10,979 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:10,979 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 188 bytes (at speed 1048576)
+[2016-09-08 16:28:10,979 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:10,979 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377281
+[2016-09-08 16:28:10,980 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377280, 1473377281, 1473377279]
+[2016-09-08 16:28:10,980 DEBUG Engine.consolidator] Merging into 1473377279
+[2016-09-08 16:28:10,980 DEBUG Engine.consolidator] Merging 1473377279
+[2016-09-08 16:28:10,983 DEBUG Engine.consolidator] Processed datapoint: 1473377279/None
+[2016-09-08 16:28:10,983 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:10,984 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:10,984 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:11,005 DEBUG Engine] Iteration took 0.027 sec, sleeping for 0.973 sec...
+[2016-09-08 16:28:11,984 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:11,984 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:11,984 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:11,984 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:11,984 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:28:11,984 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:11,984 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377280, 1473377281]
+[2016-09-08 16:28:11,984 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:11,985 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:11,985 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:11,992 DEBUG Engine] Iteration took 0.009 sec, sleeping for 0.991 sec...
+[2016-09-08 16:28:12,984 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:12,984 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:12,984 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:12,984 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:12,984 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:28:12,984 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:12,984 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377283
+[2016-09-08 16:28:12,985 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377280, 1473377281, 1473377283]
+[2016-09-08 16:28:12,985 DEBUG Engine.consolidator] Merging into 1473377280
+[2016-09-08 16:28:12,985 DEBUG Engine.consolidator] Merging 1473377280
+[2016-09-08 16:28:12,988 DEBUG Engine.consolidator] Processed datapoint: 1473377280/None
+[2016-09-08 16:28:12,988 DEBUG Engine.consolidator] Merging into 1473377281
+[2016-09-08 16:28:12,988 DEBUG Engine.consolidator] Merging 1473377281
+[2016-09-08 16:28:12,991 DEBUG Engine.consolidator] Processed datapoint: 1473377281/None
+[2016-09-08 16:28:12,991 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:12,993 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:12,993 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:13,013 DEBUG Engine] Iteration took 0.029 sec, sleeping for 0.971 sec...
+[2016-09-08 16:28:13,986 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:13,986 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:13,986 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:13,986 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:13,987 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 193 bytes (at speed 1048576)
+[2016-09-08 16:28:13,987 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:13,987 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377284
+[2016-09-08 16:28:13,989 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377283, 1473377284]
+[2016-09-08 16:28:13,989 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:13,991 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:13,991 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:14,000 DEBUG Engine] Iteration took 0.014 sec, sleeping for 0.986 sec...
+[2016-09-08 16:28:14,988 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:14,989 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:14,989 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:14,989 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:14,989 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 99 bytes (at speed 1048576)
+[2016-09-08 16:28:14,989 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:14,989 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377283, 1473377284]
+[2016-09-08 16:28:14,989 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:14,991 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:14,992 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:15,000 DEBUG Engine] Iteration took 0.012 sec, sleeping for 0.988 sec...
+[2016-09-08 16:28:15,992 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:15,992 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:15,992 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:15,993 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:15,993 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 92 bytes (at speed 1048576)
+[2016-09-08 16:28:15,993 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:15,993 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377285
+[2016-09-08 16:28:15,995 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377286
+[2016-09-08 16:28:15,996 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377283, 1473377284, 1473377285, 1473377286]
+[2016-09-08 16:28:15,997 DEBUG Engine.consolidator] Merging into 1473377283
+[2016-09-08 16:28:15,997 DEBUG Engine.consolidator] Merging 1473377283
+[2016-09-08 16:28:16,000 DEBUG Engine.consolidator] Processed datapoint: 1473377283/None
+[2016-09-08 16:28:16,000 DEBUG Engine.consolidator] Merging into 1473377284
+[2016-09-08 16:28:16,000 DEBUG Engine.consolidator] Merging 1473377284
+[2016-09-08 16:28:16,003 DEBUG Engine.consolidator] Processed datapoint: 1473377284/None
+[2016-09-08 16:28:16,004 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:16,005 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:16,005 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:16,024 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:28:16,994 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:16,994 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:16,994 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:16,994 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:16,995 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 191 bytes (at speed 1048576)
+[2016-09-08 16:28:16,995 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:16,995 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377287
+[2016-09-08 16:28:16,997 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377288
+[2016-09-08 16:28:16,999 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377285, 1473377286, 1473377287, 1473377288]
+[2016-09-08 16:28:16,999 DEBUG Engine.consolidator] Merging into 1473377285
+[2016-09-08 16:28:16,999 DEBUG Engine.consolidator] Merging 1473377285
+[2016-09-08 16:28:17,003 DEBUG Engine.consolidator] Processed datapoint: 1473377285/None
+[2016-09-08 16:28:17,003 DEBUG Engine.consolidator] Merging into 1473377286
+[2016-09-08 16:28:17,003 DEBUG Engine.consolidator] Merging 1473377286
+[2016-09-08 16:28:17,006 DEBUG Engine.consolidator] Processed datapoint: 1473377286/None
+[2016-09-08 16:28:17,006 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:17,007 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:17,007 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:17,026 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:28:17,998 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:17,999 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:17,999 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:17,999 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:17,999 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 191 bytes (at speed 1048576)
+[2016-09-08 16:28:17,999 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:17,999 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377289
+[2016-09-08 16:28:18,002 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377287, 1473377288, 1473377289]
+[2016-09-08 16:28:18,002 DEBUG Engine.consolidator] Merging into 1473377287
+[2016-09-08 16:28:18,002 DEBUG Engine.consolidator] Merging 1473377287
+[2016-09-08 16:28:18,006 DEBUG Engine.consolidator] Processed datapoint: 1473377287/None
+[2016-09-08 16:28:18,006 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:18,008 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:18,008 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:18,031 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:28:19,000 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:19,000 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:19,000 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:19,000 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:19,000 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 92 bytes (at speed 1048576)
+[2016-09-08 16:28:19,000 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2016-09-08 16:28:19,000 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377288, 1473377289]
+[2016-09-08 16:28:19,001 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:19,003 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:19,003 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:19,012 DEBUG Engine] Iteration took 0.012 sec, sleeping for 0.988 sec...
+[2016-09-08 16:28:20,005 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:20,005 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:20,005 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:20,005 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:20,005 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 3 / 280 bytes (at speed 1048576)
+[2016-09-08 16:28:20,006 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:20,006 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377290
+[2016-09-08 16:28:20,008 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377291
+[2016-09-08 16:28:20,010 DEBUG Engine.consolidator] Consolidator buffer[4]: [1473377288, 1473377289, 1473377290, 1473377291]
+[2016-09-08 16:28:20,010 DEBUG Engine.consolidator] Merging into 1473377288
+[2016-09-08 16:28:20,010 DEBUG Engine.consolidator] Merging 1473377288
+[2016-09-08 16:28:20,014 DEBUG Engine.consolidator] Processed datapoint: 1473377288/None
+[2016-09-08 16:28:20,014 DEBUG Engine.consolidator] Merging into 1473377289
+[2016-09-08 16:28:20,014 DEBUG Engine.consolidator] Merging 1473377289
+[2016-09-08 16:28:20,017 DEBUG Engine.consolidator] Processed datapoint: 1473377289/None
+[2016-09-08 16:28:20,017 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:20,018 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:20,018 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:20,037 DEBUG Engine] Iteration took 0.032 sec, sleeping for 0.968 sec...
+[2016-09-08 16:28:21,009 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:21,009 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:21,009 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:21,009 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:21,009 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 93 bytes (at speed 1048576)
+[2016-09-08 16:28:21,010 DEBUG Engine.jmeter.JTLReader] Buffer len: 7
+[2016-09-08 16:28:21,010 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 8s
+[2016-09-08 16:28:21,018 DEBUG Engine.consolidator] Consolidator buffer[2]: [1473377290, 1473377291]
+[2016-09-08 16:28:21,018 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:21,020 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:21,020 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:21,026 DEBUG Engine] Iteration took 0.018 sec, sleeping for 0.982 sec...
+[2016-09-08 16:28:22,014 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:22,014 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:22,014 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:22,014 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:22,015 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 3 / 279 bytes (at speed 1048576)
+[2016-09-08 16:28:22,015 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:22,015 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377292
+[2016-09-08 16:28:22,017 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377290, 1473377291, 1473377292]
+[2016-09-08 16:28:22,017 DEBUG Engine.consolidator] Merging into 1473377290
+[2016-09-08 16:28:22,017 DEBUG Engine.consolidator] Merging 1473377290
+[2016-09-08 16:28:22,022 DEBUG Engine.consolidator] Processed datapoint: 1473377290/None
+[2016-09-08 16:28:22,022 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:22,023 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:22,023 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:22,042 DEBUG Engine] Iteration took 0.028 sec, sleeping for 0.972 sec...
+[2016-09-08 16:28:23,019 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x10f275f10>
+[2016-09-08 16:28:23,019 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x10f275f90>
+[2016-09-08 16:28:23,020 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:23,020 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:23,020 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 1 / 94 bytes (at speed 1048576)
+[2016-09-08 16:28:23,020 DEBUG Engine.jmeter.JTLReader] Buffer len: 8
+[2016-09-08 16:28:23,020 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377293
+[2016-09-08 16:28:23,022 DEBUG Engine.consolidator] Consolidator buffer[3]: [1473377291, 1473377292, 1473377293]
+[2016-09-08 16:28:23,023 DEBUG Engine.consolidator] Merging into 1473377291
+[2016-09-08 16:28:23,023 DEBUG Engine.consolidator] Merging 1473377291
+[2016-09-08 16:28:23,027 DEBUG Engine.consolidator] Processed datapoint: 1473377291/None
+[2016-09-08 16:28:23,027 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x10f28ded0>
+[2016-09-08 16:28:23,028 DEBUG Engine] Checking <bzt.modules.reporting.FinalStatus object at 0x1108ce9d0>
+[2016-09-08 16:28:23,028 DEBUG Engine] Checking <bzt.modules.console.ConsoleStatusReporter object at 0x1108eff50>
+[2016-09-08 16:28:23,052 DEBUG Engine] Iteration took 0.033 sec, sleeping for 0.967 sec...
+[2016-09-08 16:28:23,867 WARNING Engine] Please wait for graceful shutdown...
+[2016-09-08 16:28:23,876 INFO Engine] Shutting down...
+[2016-09-08 16:28:23,882 DEBUG Engine.local] Shutdown jmeter/_blazedemo_v5.jmx
+[2016-09-08 16:28:24,883 INFO Engine.jmeter] Sending Shutdown command to JMeter on port 4445...
+[2016-09-08 16:28:28,901 DEBUG Engine.jmeter] JMeter stopped on Shutdown command
+[2016-09-08 16:28:28,901 DEBUG Engine.console] Restoring logging streams, [<logging.StreamHandler object at 0x10f275d90>]/{<logging.StreamHandler object at 0x10f275d90>: <open file '<stdout>', mode 'w' at 0x10e433150>}
+[2016-09-08 16:28:28,904 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.yml
+[2016-09-08 16:28:28,921 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.json
+[2016-09-08 16:28:28,922 DEBUG root] Caught exception in try: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/bzt/cli.py", line 156, in perform
+    self.engine.run()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 139, in run
+    self._wait()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 173, in _wait
+    time.sleep(delay)
+KeyboardInterrupt
+
+[2016-09-08 16:28:28,922 ERROR root] KeyboardInterrupt: 
+[2016-09-08 16:28:28,923 INFO Engine] Post-processing...
+[2016-09-08 16:28:28,923 DEBUG Engine.local] Post-process jmeter/_blazedemo_v5.jmx
+[2016-09-08 16:28:28,923 DEBUG Engine] Add existing artifact (move=True): modified__blazedemo_v5.jmx
+[2016-09-08 16:28:28,923 DEBUG Engine] Moving modified__blazedemo_v5.jmx to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/modified__blazedemo_v5.jmx
+[2016-09-08 16:28:28,923 DEBUG Engine.jmeter.JTLErrorsReader] Opening /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/error.jtl
+[2016-09-08 16:28:28,923 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/kpi.jtl
+[2016-09-08 16:28:28,923 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 8 / 769 bytes (at speed 1048576)
+[2016-09-08 16:28:28,923 DEBUG Engine.jmeter.JTLReader] Buffer len: 10
+[2016-09-08 16:28:28,923 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 7s
+[2016-09-08 16:28:28,924 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377295
+[2016-09-08 16:28:28,925 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377296
+[2016-09-08 16:28:28,926 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377297
+[2016-09-08 16:28:28,927 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377298
+[2016-09-08 16:28:28,928 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377299
+[2016-09-08 16:28:28,929 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377300
+[2016-09-08 16:28:28,930 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377301
+[2016-09-08 16:28:28,931 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377302
+[2016-09-08 16:28:28,932 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377303
+[2016-09-08 16:28:28,933 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377304
+[2016-09-08 16:28:28,934 DEBUG Engine.consolidator] Consolidator buffer[12]: [1473377292, 1473377293, 1473377295, 1473377296, 1473377297, 1473377298, 1473377299, 1473377300, 1473377301, 1473377302, 1473377303, 1473377304]
+[2016-09-08 16:28:28,934 DEBUG Engine.consolidator] Merging into 1473377292
+[2016-09-08 16:28:28,934 DEBUG Engine.consolidator] Merging 1473377292
+[2016-09-08 16:28:28,937 DEBUG Engine.consolidator] Processed datapoint: 1473377292/None
+[2016-09-08 16:28:28,938 DEBUG Engine.consolidator] Merging into 1473377293
+[2016-09-08 16:28:28,938 DEBUG Engine.consolidator] Merging 1473377293
+[2016-09-08 16:28:28,940 DEBUG Engine.consolidator] Processed datapoint: 1473377293/None
+[2016-09-08 16:28:28,940 DEBUG Engine.consolidator] Merging into 1473377295
+[2016-09-08 16:28:28,941 DEBUG Engine.consolidator] Merging 1473377295
+[2016-09-08 16:28:28,943 DEBUG Engine.consolidator] Processed datapoint: 1473377295/None
+[2016-09-08 16:28:28,943 DEBUG Engine.consolidator] Merging into 1473377296
+[2016-09-08 16:28:28,943 DEBUG Engine.consolidator] Merging 1473377296
+[2016-09-08 16:28:28,946 DEBUG Engine.consolidator] Processed datapoint: 1473377296/None
+[2016-09-08 16:28:28,946 DEBUG Engine.consolidator] Merging into 1473377297
+[2016-09-08 16:28:28,946 DEBUG Engine.consolidator] Merging 1473377297
+[2016-09-08 16:28:28,949 DEBUG Engine.consolidator] Processed datapoint: 1473377297/None
+[2016-09-08 16:28:28,949 DEBUG Engine.consolidator] Merging into 1473377298
+[2016-09-08 16:28:28,949 DEBUG Engine.consolidator] Merging 1473377298
+[2016-09-08 16:28:28,952 DEBUG Engine.consolidator] Processed datapoint: 1473377298/None
+[2016-09-08 16:28:28,952 DEBUG Engine.consolidator] Merging into 1473377299
+[2016-09-08 16:28:28,952 DEBUG Engine.consolidator] Merging 1473377299
+[2016-09-08 16:28:28,955 DEBUG Engine.consolidator] Processed datapoint: 1473377299/None
+[2016-09-08 16:28:28,955 DEBUG Engine.consolidator] Merging into 1473377300
+[2016-09-08 16:28:28,955 DEBUG Engine.consolidator] Merging 1473377300
+[2016-09-08 16:28:28,958 DEBUG Engine.consolidator] Processed datapoint: 1473377300/None
+[2016-09-08 16:28:28,958 DEBUG Engine.consolidator] Merging into 1473377301
+[2016-09-08 16:28:28,958 DEBUG Engine.consolidator] Merging 1473377301
+[2016-09-08 16:28:28,963 DEBUG Engine.consolidator] Processed datapoint: 1473377301/None
+[2016-09-08 16:28:28,963 DEBUG Engine.consolidator] Merging into 1473377302
+[2016-09-08 16:28:28,963 DEBUG Engine.consolidator] Merging 1473377302
+[2016-09-08 16:28:28,966 DEBUG Engine.consolidator] Processed datapoint: 1473377302/None
+[2016-09-08 16:28:28,966 DEBUG Engine.consolidator] Merging into 1473377303
+[2016-09-08 16:28:28,966 DEBUG Engine.consolidator] Merging 1473377303
+[2016-09-08 16:28:28,970 DEBUG Engine.consolidator] Processed datapoint: 1473377303/None
+[2016-09-08 16:28:28,970 DEBUG Engine.consolidator] Merging into 1473377304
+[2016-09-08 16:28:28,970 DEBUG Engine.consolidator] Merging 1473377304
+[2016-09-08 16:28:28,974 DEBUG Engine.consolidator] Processed datapoint: 1473377304/None
+[2016-09-08 16:28:28,974 INFO Engine.final_stats] Test duration: 0:00:58
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Samples count: 60, 0.00% failures
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Average times: total 2.118, latency 1.569, connect 0.104
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 0.0%: 1.516
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 50.0%: 1.844
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 90.0%: 3.552
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 95.0%: 3.558
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 99.0%: 3.972
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 99.9%: 3.972
+[2016-09-08 16:28:28,975 INFO Engine.final_stats] Percentile 100.0%: 3.972
+[2016-09-08 16:28:28,975 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2016-09-08 16:28:28,976 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.yml
+[2016-09-08 16:28:28,992 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/effective.json
+[2016-09-08 16:28:28,993 INFO root] Artifacts dir: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384
+[2016-09-08 16:28:28,993 WARNING root] Done performing with code: 1
+[2016-09-08 16:28:28,993 DEBUG Engine] Add existing artifact (move=True): bzt.log
+[2016-09-08 16:28:28,993 DEBUG Engine] Moving bzt.log to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-27-29.732384/bzt.log

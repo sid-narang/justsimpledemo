@@ -1,0 +1,626 @@
+[2016-09-08 16:33:28,596 INFO root] Taurus CLI Tool v1.6.8
+[2016-09-08 16:33:28,596 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': 'bzt.log', 'option': None, 'aliases': ['report']}
+[2016-09-08 16:33:28,596 DEBUG root] Python: CPython 2.7.10
+[2016-09-08 16:33:28,597 DEBUG root] OS: ('Darwin', 'Sids-MacBook-Pro-2.local', '14.5.0', 'Darwin Kernel Version 14.5.0: Mon Aug 29 21:14:16 PDT 2016; root:xnu-2782.50.6~1/RELEASE_X86_64', 'x86_64', 'i386')
+[2016-09-08 16:33:28,597 INFO root] Starting with configs: ['simple.yml']
+[2016-09-08 16:33:28,597 INFO Engine] Configuring...
+[2016-09-08 16:33:28,597 DEBUG Engine] Reading machine configs from: /etc/bzt.d
+[2016-09-08 16:33:28,597 INFO Engine] No personal config: /Users/sidnarang/.bzt-rc
+[2016-09-08 16:33:28,597 DEBUG Engine.Configuration] Configs: ['/etc/bzt.d/10-base.json', '/etc/bzt.d/99-installID.yml']
+[2016-09-08 16:33:28,597 DEBUG Engine.Configuration] Reading /etc/bzt.d/10-base.json as JSON
+[2016-09-08 16:33:28,598 DEBUG Engine.Configuration] Reading /etc/bzt.d/99-installID.yml as YAML
+[2016-09-08 16:33:28,598 DEBUG Engine.Configuration] Configs: ['simple.yml']
+[2016-09-08 16:33:28,598 DEBUG Engine.Configuration] Reading simple.yml as YAML
+[2016-09-08 16:33:28,600 DEBUG root] Configs: ['simple.yml']
+[2016-09-08 16:33:28,600 DEBUG root] Reading simple.yml as YAML
+[2016-09-08 16:33:28,602 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.6.8&installID=c8843905-b92c-4f70-b648-47b394eef70f
+[2016-09-08 16:33:28,990 DEBUG Engine] Result: {"latest":"1.6.8","needsUpgrade":false}
+[2016-09-08 16:33:28,991 DEBUG Engine] Installation is up-to-date
+[2016-09-08 16:33:28,991 INFO Engine] Artifacts dir: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396
+[2016-09-08 16:33:28,991 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective
+[2016-09-08 16:33:28,993 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.yml
+[2016-09-08 16:33:29,007 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.json
+[2016-09-08 16:33:29,008 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/merged.yml
+[2016-09-08 16:33:29,008 DEBUG root] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/merged.yml
+[2016-09-08 16:33:29,010 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/merged.json
+[2016-09-08 16:33:29,010 DEBUG root] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/merged.json
+[2016-09-08 16:33:29,010 DEBUG Engine] Add existing artifact (move=False): simple.yml
+[2016-09-08 16:33:29,010 DEBUG Engine] Copying simple.yml to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/simple.yml
+[2016-09-08 16:33:29,011 INFO Engine] Preparing...
+[2016-09-08 16:33:29,011 DEBUG Engine] Module config: consolidator defaultdict(None, {u'ignore-labels': [u'ignore'], u'percentiles': [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0], u'class': u'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2016-09-08 16:33:29,011 DEBUG root] Importing module: bzt.modules.aggregator
+[2016-09-08 16:33:29,012 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/Library/Python/2.7/site-packages/bzt/modules/aggregator.pyc'>
+[2016-09-08 16:33:29,012 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2016-09-08 16:33:29,012 DEBUG Engine] Module config: monitoring defaultdict(None, {u'class': u'bzt.modules.monitoring.Monitoring'})
+[2016-09-08 16:33:29,012 DEBUG root] Importing module: bzt.modules.monitoring
+[2016-09-08 16:33:29,032 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/Library/Python/2.7/site-packages/bzt/modules/monitoring.pyc'>
+[2016-09-08 16:33:29,032 DEBUG Engine] Module config: local defaultdict(None, {u'class': u'bzt.modules.provisioning.Local'})
+[2016-09-08 16:33:29,032 DEBUG root] Importing module: bzt.modules.provisioning
+[2016-09-08 16:33:29,032 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/Library/Python/2.7/site-packages/bzt/modules/provisioning.pyc'>
+[2016-09-08 16:33:29,033 DEBUG Engine] Module config: jmeter defaultdict(None, {u'path': u'~/.bzt/jmeter-taurus/', u'plugins': [u'jpgc-casutg', u'jpgc-dummy', u'jpgc-ffw', u'jpgc-fifo', u'jpgc-functions', u'jpgc-json', u'jpgc-perfmon', u'jpgc-prmctl', u'jpgc-tst'], u'properties': defaultdict(None, {u'jmeter.save.saveservice.autoflush': u'true', u'jmeterengine.force.system.exit': u'true', u'jmeter.save.saveservice.connect_time': u'true', u'summariser.name': u'', u'mode': u'Stripped'}), u'class': u'bzt.modules.jmeter.JMeterExecutor'})
+[2016-09-08 16:33:29,033 DEBUG root] Importing module: bzt.modules.jmeter
+[2016-09-08 16:33:29,040 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/Library/Python/2.7/site-packages/bzt/modules/jmeter.pyc'>
+[2016-09-08 16:33:29,040 DEBUG Engine.local] Preparing executor: jmeter/4335944208
+[2016-09-08 16:33:29,040 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/jmeter.log
+[2016-09-08 16:33:29,040 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2016-09-08 16:33:29,041 DEBUG Engine.jmeter] Port 4445 is free
+[2016-09-08 16:33:29,041 DEBUG Engine.jmeter] Using port 4445 for management
+[2016-09-08 16:33:29,041 DEBUG Engine.jmeter.JavaVM] Trying: ['java', '-version']
+[2016-09-08 16:33:29,121 DEBUG Engine.jmeter.JavaVM] JavaVM output: java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+
+[2016-09-08 16:33:29,121 DEBUG Engine.jmeter.TclLibrary] We don't need to check tcl library on this platform
+[2016-09-08 16:33:29,121 DEBUG Engine.jmeter.JMeter] Trying jmeter: /Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh
+[2016-09-08 16:33:29,124 DEBUG bzt.utils] Executing shell: [u'/Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh', '-j', '/var/folders/rz/llsy0wqx4zn6qw066kpv7l8r0000gn/T/jmeterZTvRIUlog', '--version']
+[2016-09-08 16:33:29,445 DEBUG Engine.jmeter.JMeter] JMeter check: Copyright (c) 1998-2015 The Apache Software Foundation
+Version 2.13 r1665067
+ / None
+[2016-09-08 16:33:29,446 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/requests.jmx
+[2016-09-08 16:33:29,448 DEBUG JMeterScenarioBuilder] Saving JMX to: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/requests.jmx
+[2016-09-08 16:33:29,449 DEBUG Engine.jmeter] Load: LoadSpec(concurrency=100, throughput=None, ramp_up=60.0, hold=300.0, iterations=0, duration=360.0, steps=None)
+[2016-09-08 16:33:29,451 DEBUG Engine.jmeter] Original threads: 1.0
+[2016-09-08 16:33:29,453 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+[2016-09-08 16:33:29,453 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/error.jtl
+[2016-09-08 16:33:29,454 DEBUG Engine.jmeter] Enforcing parent sample for transaction controller
+[2016-09-08 16:33:29,454 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/modified_requests.jmx
+[2016-09-08 16:33:29,454 DEBUG JMX] Saving JMX to: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/modified_requests.jmx
+[2016-09-08 16:33:29,455 DEBUG Engine.jmeter] Additional properties: defaultdict(None, {u'jmeter.save.saveservice.autoflush': u'true', u'jmeter.save.saveservice.connect_time': u'true', 'user.classpath': '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396', u'summariser.name': u'', u'jmeterengine.force.system.exit': u'true', 'jmeter.save.saveservice.timestamp_format': 'ms', u'mode': u'Stripped', 'jmeterengine.nongui.maxport': 4445, 'jmeterengine.nongui.port': 4445})
+[2016-09-08 16:33:29,455 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/jmeter-bzt.properties
+[2016-09-08 16:33:29,455 DEBUG Engine.jmeter] Additional system properties defaultdict(None, {'sun.net.inetaddr.ttl': 0})
+[2016-09-08 16:33:29,455 DEBUG Engine] New artifact filename: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/system.properties
+[2016-09-08 16:33:29,456 DEBUG Engine] Module config: final_stats defaultdict(None, {u'class': u'bzt.modules.reporting.FinalStatus'})
+[2016-09-08 16:33:29,456 DEBUG root] Importing module: bzt.modules.reporting
+[2016-09-08 16:33:29,458 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/Library/Python/2.7/site-packages/bzt/modules/reporting.pyc'>
+[2016-09-08 16:33:29,458 DEBUG Engine] Module config: console defaultdict(None, {u'disable': False, u'class': u'bzt.modules.console.ConsoleStatusReporter'})
+[2016-09-08 16:33:29,458 DEBUG root] Importing module: bzt.modules.console
+[2016-09-08 16:33:29,458 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/Library/Python/2.7/site-packages/bzt/modules/console.pyc'>
+[2016-09-08 16:33:29,458 DEBUG Engine] Module config: blazemeter defaultdict(None, {'token': '********', u'class': u'bzt.modules.blazemeter.BlazeMeterUploader'})
+[2016-09-08 16:33:29,459 DEBUG root] Importing module: bzt.modules.blazemeter
+[2016-09-08 16:33:29,459 DEBUG root] Loading class: 'BlazeMeterUploader' from <module 'bzt.modules.blazemeter' from '/Library/Python/2.7/site-packages/bzt/modules/blazemeter.pyc'>
+[2016-09-08 16:33:29,465 DEBUG BlazeMeterClient] Request: GET https://a.blazemeter.com/api/latest/web/version None
+[2016-09-08 16:33:30,430 DEBUG BlazeMeterClient] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": "blazemeter-backend-package 3124 release/2016-08-22_48_3 B3124  Wed Aug 31 18:43:23 2016 +0300 162d9700003d7a20d6e039a0761966874e9e7638\n"
+}
+[2016-09-08 16:33:30,431 DEBUG BlazeMeterClient] Request: GET https://a.blazemeter.com/api/latest/tests None
+[2016-09-08 16:33:31,279 DEBUG BlazeMeterClient] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        {
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "created": 1473375998,
+            "updated": 1473375998,
+            "configuration": {
+                
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Tests for user: 50
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473375998, u'name': u'Taurus_SN_Simple', u'created': 1473375998, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267079}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Matched: {u'updated': 1473375998, u'name': u'Taurus_SN_Simple', u'created': 1473375998, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267079}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473374655, u'name': u'Taurus_SN Demo', u'created': 1473374655, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267071}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473365980, u'name': u'Taurus Demo B', u'created': 1473365980, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267026}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473362305, u'name': u'BlazeDemo', u'kpiTrackingData': {u'trends': [u'responseTime', u'errPercent', u'hitCount', u'bandwidth', u'latency']}, u'created': 1435334062, u'projectId': None, u'userId': 106819, u'draftId': u'td_2015_06_26_08_52_35_106819_3211', u'lastRunTime': 1473362305, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'network': {u'latency': 90, u'bandwidth': 850, u'preset': u'3G-good', u'packetloss': 0}, u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'description': u'Response time > 4 Secs', u'stopTestOnViolation': False, u'value': u'4000', u'label': u'ALL', u'field': u'responseTime.avg', u'op': u'gt'}], u'slidingWindow': False}, u'newrelic': [u'561ec211848853c37fd9eea3'], u'jmeter': {u'override': {u'duration': 20, u'rampup': 600, u'iterations': -1}, u'version': u'2.11blazemeter', u'filename': u'_blazedemo_v3.jmx'}}, u'type': u'jmeter', u'location': u'us-west-1', u'concurrency': 450, u'dedicatedIpsEnabled': False}, u'id': 5079795}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473350484, u'name': u'test', u'created': 1473350484, u'projectId': 36993, u'userId': 106819, u'draftId': u'td_2016_09_08_08_50_02_106819_3525', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 60, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'sel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266928}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473348098, u'name': u'test', u'created': 1473348098, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_09_08_08_15_31_106819_2785', u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 1, u'location': u'us-east-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 30, u'rampup': 300, u'threads': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'sel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266913}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473329240, u'name': u'Aldo_fixed', u'created': 1473273163, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_09_07_11_32_07_106819_581', u'lastRunTime': 1473329240, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_us_men.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5266349}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473296558, u'name': u'Taurus Test', u'created': 1473296558, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266492}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473296556, u'name': u'Taurus Demo', u'created': 1473296556, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266491}
+[2016-09-08 16:33:31,282 DEBUG BlazeMeterClient] Test: {u'updated': 1473277180, u'name': u'demo100', u'kpiTrackingData': {u'trends': [u'hitCount', u'responseTime', u'errPercent']}, u'created': 1473276126, u'projectId': 42025, u'userId': 149837, u'draftId': u'td_2016_09_07_15_20_27_149837_2921', u'lastRunTime': 1473276133, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 200, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo100.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266372}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1473177722, u'name': u'demo91', u'kpiTrackingData': [], u'created': 1473176589, u'projectId': 41991, u'userId': 149837, u'draftId': u'td_2016_09_06_11_40_33_149837_9485', u'lastRunTime': 1473177722, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-central1-a', u'concurrency': 1001, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 24}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 77, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo91.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5265364}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472739682, u'name': u'timer test', u'created': 1472739673, u'projectId': 39789, u'userId': 149457, u'draftId': u'td_2016_09_01_10_20_25_149457_4299', u'lastRunTime': 1472739682, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 1, u'iterations': -1}, u'version': u'2.13', u'filename': u'simple-timer-test.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5262369}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472661688, u'name': u'easyTravel static', u'created': 1472135796, u'projectId': 41713, u'userId': 149837, u'draftId': u'td_2016_08_25_10_34_31_149837_5423', u'lastRunTime': 1472661688, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 201, u'plugins': {u'splitCSV': {u'enabled': False}, u'throughputController': {u'throughput': 10}, u'remoteControl': [{u'value': u'32790', u'key': u'port'}, {u'value': u'52.207.232.110', u'key': u'server'}], u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'field': u'responseTime.avg', u'op': u'lt', u'description': u'too slow', u'value': u'1000', u'label': u'Home'}], u'slidingWindow': False}, u'dynaTrace': {u'headerAttributes': []}, u'hosts': [{u'ip': u'52.91.89.252', u'hostname': u'aws-et'}], u'jmeter': {u'override': {u'duration': 5, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'easyTravel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5257243}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472579664, u'name': u'Medium Demo', u'kpiTrackingData': {u'trends': [u'hitCount', u'latency', u'responseTime', u'stdResp', u'errPercent'], u'limit': 25}, u'created': 1465380035, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_06_08_05_59_34_149837_3392', u'lastRunTime': 1470412564, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'standard_demo.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 130, u'javaVersion': u'1.7'}, u'id': 5214946}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472579072, u'name': u'demo80', u'created': 1472578914, u'projectId': 41823, u'userId': 149837, u'draftId': u'td_2016_08_30_13_41_27_149837_914', u'lastRunTime': 1472579072, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 201, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 6, u'rampup': 154, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo80.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5260647}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472234593, u'name': u'demo70_c', u'created': 1472222316, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_08_26_10_37_42_149837_6770', u'lastRunTime': 1472234593, u'configuration': {u'serversCount': 4, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 40}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo70.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'javaVersion': u'1.7'}, u'id': 5258194}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472233405, u'name': u'demo72', u'created': 1472233399, u'projectId': 41754, u'userId': 149837, u'draftId': u'td_2016_08_26_13_40_51_149837_6643', u'lastRunTime': 1472233405, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 50}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo72.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5258302}
+[2016-09-08 16:33:31,283 DEBUG BlazeMeterClient] Test: {u'updated': 1472221129, u'name': u'demo70', u'created': 1472221003, u'projectId': 41748, u'userId': 149837, u'draftId': u'td_2016_08_26_10_16_22_149837_9393', u'lastRunTime': 1472221129, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo70.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 100, u'javaVersion': u'1.7'}, u'id': 5258184}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1472064052, u'name': u'simple_travel_nr', u'kpiTrackingData': {u'limit': 25}, u'created': 1471368991, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1472063285, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 20, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'54.210.176.248:8000', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'newrelic': [u'57b48077f168ec5b193b60da']}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5249495}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1472063012, u'name': u'staging', u'kpiTrackingData': [], u'created': 1470246274, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_13_43_48_149837_7648', u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'taurus': {u'filename': u'staging-inline.yml'}}, u'type': u'taurus', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5240460}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471988728, u'name': u'property test', u'created': 1468530913, u'projectId': 40484, u'userId': 149837, u'draftId': u'td_2016_07_14_17_13_09_149837_9274', u'lastRunTime': 1471988728, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 0, u'iterations': -1}, u'version': u'2.13', u'filename': u'property_test.jmx'}, u'remoteControl': [{u'value': u'blazedemo.com', u'key': u'servername'}]}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5230640}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471967880, u'name': u'demo60', u'created': 1471967872, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_08_23_11_53_32_149837_7771', u'lastRunTime': 1471967880, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-central1-a', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 20}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo60.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5255530}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471900323, u'name': u'easyTravel w/ dt apm', u'created': 1471899028, u'projectId': 40484, u'userId': 149837, u'lastRunTime': 1471900323, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 50, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 1, u'override': {u'duration': 20, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.208.16.171:32791', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'dynaTrace': {u'headerAttributes': []}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5254847}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471617391, u'name': u'demo51', u'created': 1471616949, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471617391, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 25, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'newrelic': [u'57b71950ef68eceb7f4c22c6'], u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\n\nWDS.browser.get("http://54.210.176.248:8001/")\n\nvar menu_option = WDS.browser.findElement(pkg.By.cssSelector("body > form > select:nth-child(4) > option:nth-child(2)"));\nmenu_option.click();\n\nvar submit = WDS.browser.findElement(pkg.By.cssSelector("body > form > input.btn.btn-primary"));\nsubmit.click();\n\nWDS.sampleResult.sampleEnd();\n\n\nvar result = WDS.browser.findElement(pkg.By.cssSelector(\'body > h1\'));\nvar result_text = result.getText();\nif(result_text.equals("Flights from New York to Boston:")) {\n    WDS.sampleResult.successful = true;\n    WDS.sampleResult.responseMessage = \'expected results returned\';\n}\nelse {\n    WDS.sampleResult.successful = false;\n    WDS.sampleResult.responseMessage = \'expected results not returned\';\n}\n', u'isExtra': False, u'label': u'transaction1'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 3, u'rampup': 60, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5252551}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471616277, u'name': u'webdriver', u'created': 1471465446, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471607829, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 25, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'newrelic': [u'57b6f3f5f168ec4b1d3b60d7', u'57b48077f168ec5b193b60da'], u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\n\nWDS.browser.get("http://54.210.176.248:8000/");\n\nvar menu_option = WDS.browser.findElement(pkg.By.cssSelector("body > form > select:nth-child(4) > option:nth-child(2)"));\nmenu_option.click();\n\nvar submit = WDS.browser.findElement(pkg.By.cssSelector("body > form > input.btn.btn-primary"));\nsubmit.click();\n\nWDS.sampleResult.sampleEnd();\n\n\nvar result = WDS.browser.findElement(pkg.By.cssSelector(\'body > h1\'));\nvar result_text = result.getText();\nif(result_text.equals("Flights from New York to Boston:")) {\n    WDS.sampleResult.successful = true;\n    WDS.sampleResult.responseMessage = \'expected results returned\';\n}\nelse {\n    WDS.sampleResult.successful = false;\n    WDS.sampleResult.responseMessage = \'expected results not returned\';\n}\n', u'isExtra': False, u'label': u'trans1'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 3, u'rampup': 0, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5250685}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471613559, u'name': u'simple_travel home page', u'created': 1471608806, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471613559, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.210.176.248:8000/', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'newrelicInsights': {u'credentialsId': u'57b708f5ef68ec67044c22bf'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5252427}
+[2016-09-08 16:33:31,284 DEBUG BlazeMeterClient] Test: {u'updated': 1471464935, u'name': u'selenium_test', u'created': 1471026202, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471464935, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'import org.junit.After;\nimport org.junit.Before;\nimport org.junit.AfterClass;\nimport org.junit.BeforeClass;\nimport org.junit.Test;\n\nimport static org.junit.Assert.*;\n\nimport java.util.concurrent.TimeUnit;\nimport java.util.Date;\nimport java.io.File;\n\nimport org.openqa.selenium.support.ui.Select;\nimport org.openqa.selenium.interactions.Actions;\nimport org.openqa.selenium.firefox.FirefoxDriver;\nimport org.openqa.selenium.*;\n\nimport static org.openqa.selenium.OutputType.*;\n\npublic class Blazedemoju {\n    FirefoxDriver wd;\n\n    @Before\n    public void setUp() throws Exception {\n        wd = new FirefoxDriver();\n        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);\n    }\n\n    @Test\n    public void blazedemoju() {\n        wd.get("http://blazedemo.com/");\n        if (!wd.findElement(By.xpath("//div[3]/form/select[1]//option[3]")).isSelected()) {\n            wd.findElement(By.xpath("//div[3]/form/select[1]//option[3]")).click();\n        }\n        if (!wd.findElement(By.xpath("//div[3]/form/select[2]//option[6]")).isSelected()) {\n            wd.findElement(By.xpath("//div[3]/form/select[2]//option[6]")).click();\n        }\n        wd.findElement(By.cssSelector("input.btn.btn-primary")).click();\n        wd.findElement(By.xpath("//table[@class=\'table\']/tbody/tr[4]/td[1]/input")).click();\n        wd.findElement(By.cssSelector("input.btn.btn-primary")).click();\n    }\n\n    @After\n    public void tearDown() {\n        wd.quit();\n    }\n\n    public static boolean isAlertPresent(FirefoxDriver wd) {\n        try {\n            wd.switchTo().alert();\n            return true;\n        } catch (NoAlertPresentException e) {\n            return false;\n        }\n    }\n}\n', u'isExtra': False, u'label': u'sample'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 20, u'rampup': 1, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'location': u'us-central1-a', u'concurrency': 2, u'javaVersion': u'1.7'}, u'id': 5246896}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471444249, u'name': u'demo44sand', u'created': 1471444241, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_30_09_149837_2324', u'lastRunTime': 1471444249, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo44.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250424}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471444021, u'name': u'demo44', u'created': 1471443697, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_21_16_149837_8393', u'lastRunTime': 1471444021, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 1000, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 600, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo44.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250415}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471443153, u'name': u'demo43', u'created': 1471443047, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_10_30_149837_4679', u'lastRunTime': 1471443153, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo43.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5250402}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471437006, u'name': u'demo42', u'created': 1471436989, u'projectId': 41370, u'userId': 149837, u'draftId': u'td_2016_08_17_08_29_11_149837_3984', u'lastRunTime': 1471437006, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo42.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250294}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471375735, u'name': u'demo41_opl', u'created': 1471375117, u'projectId': 41456, u'userId': 149837, u'draftId': u'td_2016_08_16_15_16_59_149837_6643', u'lastRunTime': 1471375735, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-57596c2187a875f532fc9b80', u'concurrency': 3, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 3, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo41.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249577}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471371975, u'name': u'demo41', u'created': 1471371966, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_16_14_23_54_149837_6455', u'lastRunTime': 1471371975, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 200, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo41.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249538}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471362645, u'name': u'demo40', u'created': 1471361550, u'projectId': 41443, u'userId': 149837, u'draftId': u'td_2016_08_16_11_28_50_149837_6739', u'lastRunTime': 1471362645, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 150, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'field': u'responseTime.avg', u'op': u'lt', u'description': u'too long', u'value': u'700', u'label': u'ALL'}], u'slidingWindow': False}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo40.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249391}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471024281, u'name': u'blazedemo_nr', u'created': 1471024281, u'projectId': 41370, u'userId': 149837, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'www.blazedemo.com', u'label': u'blazedemo', u'headers': [], u'type': u'GET', u'order': 1}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5246878}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1471019386, u'name': u'simple_travel_url', u'created': 1471019378, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471019386, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 480, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.210.176.248:8000/', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 1}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5246835}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1470939701, u'name': u'Optum1', u'created': 1469650909, u'projectId': 39649, u'userId': 106819, u'draftId': u'td_2016_07_27_13_11_08_106819_4552', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}, u'newrelic': [u'561ec211848853c37fd9eea3']}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5236874}
+[2016-09-08 16:33:31,285 DEBUG BlazeMeterClient] Test: {u'updated': 1470939634, u'name': u'Optum1 - Copy', u'created': 1470939634, u'projectId': 36993, u'userId': 106819, u'draftId': u'td_2016_07_27_13_11_08_106819_4552', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-555543a256e0941b4bb6edad', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 30, u'rampup': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}, u'newrelic': [u'561ec211848853c37fd9eea3']}, u'duration': 30, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5246100}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470939611, u'name': u'test123', u'created': 1470935973, u'projectId': 36998, u'userId': 106819, u'draftId': u'td_2016_08_11_10_13_23_106819_6387', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-555543a256e0941b4bb6edad', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 10, u'rampup': 10, u'iterations': -1}, u'version': u'2.13', u'filename': u'Test100.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5246069}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470850461, u'name': u'Test12', u'created': 1470850450, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_10_10_26_45_106819_329', u'lastRunTime': 1470850461, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 10, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5245048}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470733134, u'name': u'Aldo_8_9_50K_Final', u'created': 1470678796, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_08_10_51_56_106819_4075', u'lastRunTime': 1470733134, u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 45, u'location': u'us-east-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 60, u'rampup': 1800, u'threads': 500, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_again.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.8'}, u'id': 5242728}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470678819, u'name': u'Aldo_New', u'created': 1470420848, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_05_11_13_12_106819_959', u'lastRunTime': 1470678819, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 40, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 10, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_again.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.8'}, u'id': 5241581}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470658834, u'name': u'demo32', u'created': 1470656908, u'projectId': 41256, u'userId': 149837, u'draftId': u'td_2016_08_08_07_47_35_149837_9793', u'lastRunTime': 1470658834, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo32.jmx'}, u'hosts': [{u'ip': u'54.210.176.248', u'hostname': u'aws-uut'}], u'dynaTrace': {u'headerAttributes': []}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5242371}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470653732, u'name': u'SimpleTravel home', u'created': 1470650048, u'projectId': 41222, u'userId': 149837, u'lastRunTime': 1470653732, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'dynaTrace': {u'headerAttributes': []}, u'hosts': [{u'ip': u'54.210.176.248', u'hostname': u'aws-uut'}], u'http': {u'delay': 2500, u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://aws-uut', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5242275}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470422002, u'name': u'demo25', u'created': 1470421345, u'projectId': 41222, u'userId': 149837, u'draftId': u'td_2016_08_05_14_17_26_149837_5505', u'lastRunTime': 1470422002, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 300, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo25.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5241583}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470352841, u'name': u'Test', u'created': 1470352833, u'projectId': None, u'userId': 106819, u'lastRunTime': 1470352841, u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 1, u'location': u'us-west-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\nWDS.browser.manage().window().maximize();\nWDS.browser.get("http://localhost");\n\nvar searchField = WDS.browser.findElement(pkg.By.id("some_element_id"));\nsearchField.click();\nWDS.log.info(WDS.name, "has logged an entry");\n\nWDS.sampleResult.sampleEnd();', u'isExtra': False, u'label': u'Test'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 20, u'rampup': 300, u'threads': 5, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5241124}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470246946, u'name': u'bzt generated jmeter', u'created': 1470246936, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_13_51_30_149837_8473', u'lastRunTime': 1470246946, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 500, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'modified_requests.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5240463}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470240344, u'name': u'Demo23', u'created': 1470239763, u'projectId': 41150, u'userId': 149837, u'draftId': u'td_2016_08_03_11_53_21_149837_2259', u'lastRunTime': 1470240344, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo23.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5240418}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1470237300, u'name': u'concurrency example', u'created': 1470237050, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_11_09_58_149837_9530', u'lastRunTime': 1470237300, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 120, u'iterations': -1}, u'version': u'2.13', u'filename': u'concurrency-example.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 150, u'javaVersion': u'1.7'}, u'id': 5240396}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Test: {u'updated': 1469814878, u'name': u'recording demo', u'created': 1469814864, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_07_29_13_52_05_149837_9606', u'lastRunTime': 1469814878, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'recording.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5237865}
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Using test ID: 5267079
+[2016-09-08 16:33:31,286 DEBUG BlazeMeterClient] Request: GET https://a.blazemeter.com/api/latest/web/version None
+[2016-09-08 16:33:31,791 DEBUG BlazeMeterClient] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": "blazemeter-backend-package 3124 release/2016-08-22_48_3 B3124  Wed Aug 31 18:43:23 2016 +0300 162d9700003d7a20d6e039a0761966874e9e7638\n"
+}
+[2016-09-08 16:33:31,791 DEBUG BlazeMeterClient] Request: GET https://a.blazemeter.com/api/latest/tests None
+[2016-09-08 16:33:32,718 DEBUG BlazeMeterClient] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        {
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "created": 1473375998,
+            "updated": 1473375998,
+            "configuration": {
+                
+[2016-09-08 16:33:32,719 DEBUG BlazeMeterClient] Tests for user: 50
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473375998, u'name': u'Taurus_SN_Simple', u'created': 1473375998, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267079}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473374655, u'name': u'Taurus_SN Demo', u'created': 1473374655, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267071}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473365980, u'name': u'Taurus Demo B', u'created': 1473365980, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5267026}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473362305, u'name': u'BlazeDemo', u'kpiTrackingData': {u'trends': [u'responseTime', u'errPercent', u'hitCount', u'bandwidth', u'latency']}, u'created': 1435334062, u'projectId': None, u'userId': 106819, u'draftId': u'td_2015_06_26_08_52_35_106819_3211', u'lastRunTime': 1473362305, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'network': {u'latency': 90, u'bandwidth': 850, u'preset': u'3G-good', u'packetloss': 0}, u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'description': u'Response time > 4 Secs', u'stopTestOnViolation': False, u'value': u'4000', u'label': u'ALL', u'field': u'responseTime.avg', u'op': u'gt'}], u'slidingWindow': False}, u'newrelic': [u'561ec211848853c37fd9eea3'], u'jmeter': {u'override': {u'duration': 20, u'rampup': 600, u'iterations': -1}, u'version': u'2.11blazemeter', u'filename': u'_blazedemo_v3.jmx'}}, u'type': u'jmeter', u'location': u'us-west-1', u'concurrency': 450, u'dedicatedIpsEnabled': False}, u'id': 5079795}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473350484, u'name': u'test', u'created': 1473350484, u'projectId': 36993, u'userId': 106819, u'draftId': u'td_2016_09_08_08_50_02_106819_3525', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 60, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'sel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266928}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473348098, u'name': u'test', u'created': 1473348098, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_09_08_08_15_31_106819_2785', u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 1, u'location': u'us-east-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 30, u'rampup': 300, u'threads': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'sel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266913}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473329240, u'name': u'Aldo_fixed', u'created': 1473273163, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_09_07_11_32_07_106819_581', u'lastRunTime': 1473329240, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_us_men.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5266349}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473296558, u'name': u'Taurus Test', u'created': 1473296558, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266492}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Matched: {u'updated': 1473296558, u'name': u'Taurus Test', u'created': 1473296558, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266492}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473296556, u'name': u'Taurus Demo', u'created': 1473296556, u'projectId': None, u'userId': 106819, u'configuration': {u'type': u'external', u'concurrency': 1}, u'id': 5266491}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473277180, u'name': u'demo100', u'kpiTrackingData': {u'trends': [u'hitCount', u'responseTime', u'errPercent']}, u'created': 1473276126, u'projectId': 42025, u'userId': 149837, u'draftId': u'td_2016_09_07_15_20_27_149837_2921', u'lastRunTime': 1473276133, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 200, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo100.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5266372}
+[2016-09-08 16:33:32,720 DEBUG BlazeMeterClient] Test: {u'updated': 1473177722, u'name': u'demo91', u'kpiTrackingData': [], u'created': 1473176589, u'projectId': 41991, u'userId': 149837, u'draftId': u'td_2016_09_06_11_40_33_149837_9485', u'lastRunTime': 1473177722, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-central1-a', u'concurrency': 1001, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 24}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 77, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo91.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5265364}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472739682, u'name': u'timer test', u'created': 1472739673, u'projectId': 39789, u'userId': 149457, u'draftId': u'td_2016_09_01_10_20_25_149457_4299', u'lastRunTime': 1472739682, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 1, u'iterations': -1}, u'version': u'2.13', u'filename': u'simple-timer-test.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5262369}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472661688, u'name': u'easyTravel static', u'created': 1472135796, u'projectId': 41713, u'userId': 149837, u'draftId': u'td_2016_08_25_10_34_31_149837_5423', u'lastRunTime': 1472661688, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 201, u'plugins': {u'splitCSV': {u'enabled': False}, u'throughputController': {u'throughput': 10}, u'remoteControl': [{u'value': u'32790', u'key': u'port'}, {u'value': u'52.207.232.110', u'key': u'server'}], u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'field': u'responseTime.avg', u'op': u'lt', u'description': u'too slow', u'value': u'1000', u'label': u'Home'}], u'slidingWindow': False}, u'dynaTrace': {u'headerAttributes': []}, u'hosts': [{u'ip': u'52.91.89.252', u'hostname': u'aws-et'}], u'jmeter': {u'override': {u'duration': 5, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'easyTravel.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5257243}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472579664, u'name': u'Medium Demo', u'kpiTrackingData': {u'trends': [u'hitCount', u'latency', u'responseTime', u'stdResp', u'errPercent'], u'limit': 25}, u'created': 1465380035, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_06_08_05_59_34_149837_3392', u'lastRunTime': 1470412564, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'standard_demo.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 130, u'javaVersion': u'1.7'}, u'id': 5214946}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472579072, u'name': u'demo80', u'created': 1472578914, u'projectId': 41823, u'userId': 149837, u'draftId': u'td_2016_08_30_13_41_27_149837_914', u'lastRunTime': 1472579072, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 201, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 6, u'rampup': 154, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo80.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5260647}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472234593, u'name': u'demo70_c', u'created': 1472222316, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_08_26_10_37_42_149837_6770', u'lastRunTime': 1472234593, u'configuration': {u'serversCount': 4, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 40}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo70.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'javaVersion': u'1.7'}, u'id': 5258194}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472233405, u'name': u'demo72', u'created': 1472233399, u'projectId': 41754, u'userId': 149837, u'draftId': u'td_2016_08_26_13_40_51_149837_6643', u'lastRunTime': 1472233405, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 50}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo72.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5258302}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472221129, u'name': u'demo70', u'created': 1472221003, u'projectId': 41748, u'userId': 149837, u'draftId': u'td_2016_08_26_10_16_22_149837_9393', u'lastRunTime': 1472221129, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo70.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 100, u'javaVersion': u'1.7'}, u'id': 5258184}
+[2016-09-08 16:33:32,721 DEBUG BlazeMeterClient] Test: {u'updated': 1472064052, u'name': u'simple_travel_nr', u'kpiTrackingData': {u'limit': 25}, u'created': 1471368991, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1472063285, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 20, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'54.210.176.248:8000', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'newrelic': [u'57b48077f168ec5b193b60da']}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5249495}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1472063012, u'name': u'staging', u'kpiTrackingData': [], u'created': 1470246274, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_13_43_48_149837_7648', u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'taurus': {u'filename': u'staging-inline.yml'}}, u'type': u'taurus', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5240460}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471988728, u'name': u'property test', u'created': 1468530913, u'projectId': 40484, u'userId': 149837, u'draftId': u'td_2016_07_14_17_13_09_149837_9274', u'lastRunTime': 1471988728, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 0, u'iterations': -1}, u'version': u'2.13', u'filename': u'property_test.jmx'}, u'remoteControl': [{u'value': u'blazedemo.com', u'key': u'servername'}]}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5230640}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471967880, u'name': u'demo60', u'created': 1471967872, u'projectId': 39789, u'userId': 149837, u'draftId': u'td_2016_08_23_11_53_32_149837_7771', u'lastRunTime': 1471967880, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-central1-a', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'throughputController': {u'throughput': 20}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo60.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5255530}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471900323, u'name': u'easyTravel w/ dt apm', u'created': 1471899028, u'projectId': 40484, u'userId': 149837, u'lastRunTime': 1471900323, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 50, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 1, u'override': {u'duration': 20, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.208.16.171:32791', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'dynaTrace': {u'headerAttributes': []}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5254847}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471617391, u'name': u'demo51', u'created': 1471616949, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471617391, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 25, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'newrelic': [u'57b71950ef68eceb7f4c22c6'], u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\n\nWDS.browser.get("http://54.210.176.248:8001/")\n\nvar menu_option = WDS.browser.findElement(pkg.By.cssSelector("body > form > select:nth-child(4) > option:nth-child(2)"));\nmenu_option.click();\n\nvar submit = WDS.browser.findElement(pkg.By.cssSelector("body > form > input.btn.btn-primary"));\nsubmit.click();\n\nWDS.sampleResult.sampleEnd();\n\n\nvar result = WDS.browser.findElement(pkg.By.cssSelector(\'body > h1\'));\nvar result_text = result.getText();\nif(result_text.equals("Flights from New York to Boston:")) {\n    WDS.sampleResult.successful = true;\n    WDS.sampleResult.responseMessage = \'expected results returned\';\n}\nelse {\n    WDS.sampleResult.successful = false;\n    WDS.sampleResult.responseMessage = \'expected results not returned\';\n}\n', u'isExtra': False, u'label': u'transaction1'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 3, u'rampup': 60, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5252551}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471616277, u'name': u'webdriver', u'created': 1471465446, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471607829, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 25, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'newrelic': [u'57b6f3f5f168ec4b1d3b60d7', u'57b48077f168ec5b193b60da'], u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\n\nWDS.browser.get("http://54.210.176.248:8000/");\n\nvar menu_option = WDS.browser.findElement(pkg.By.cssSelector("body > form > select:nth-child(4) > option:nth-child(2)"));\nmenu_option.click();\n\nvar submit = WDS.browser.findElement(pkg.By.cssSelector("body > form > input.btn.btn-primary"));\nsubmit.click();\n\nWDS.sampleResult.sampleEnd();\n\n\nvar result = WDS.browser.findElement(pkg.By.cssSelector(\'body > h1\'));\nvar result_text = result.getText();\nif(result_text.equals("Flights from New York to Boston:")) {\n    WDS.sampleResult.successful = true;\n    WDS.sampleResult.responseMessage = \'expected results returned\';\n}\nelse {\n    WDS.sampleResult.successful = false;\n    WDS.sampleResult.responseMessage = \'expected results not returned\';\n}\n', u'isExtra': False, u'label': u'trans1'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 3, u'rampup': 0, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5250685}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471613559, u'name': u'simple_travel home page', u'created': 1471608806, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471613559, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.210.176.248:8000/', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}, u'newrelicInsights': {u'credentialsId': u'57b708f5ef68ec67044c22bf'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5252427}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471464935, u'name': u'selenium_test', u'created': 1471026202, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471464935, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'import org.junit.After;\nimport org.junit.Before;\nimport org.junit.AfterClass;\nimport org.junit.BeforeClass;\nimport org.junit.Test;\n\nimport static org.junit.Assert.*;\n\nimport java.util.concurrent.TimeUnit;\nimport java.util.Date;\nimport java.io.File;\n\nimport org.openqa.selenium.support.ui.Select;\nimport org.openqa.selenium.interactions.Actions;\nimport org.openqa.selenium.firefox.FirefoxDriver;\nimport org.openqa.selenium.*;\n\nimport static org.openqa.selenium.OutputType.*;\n\npublic class Blazedemoju {\n    FirefoxDriver wd;\n\n    @Before\n    public void setUp() throws Exception {\n        wd = new FirefoxDriver();\n        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);\n    }\n\n    @Test\n    public void blazedemoju() {\n        wd.get("http://blazedemo.com/");\n        if (!wd.findElement(By.xpath("//div[3]/form/select[1]//option[3]")).isSelected()) {\n            wd.findElement(By.xpath("//div[3]/form/select[1]//option[3]")).click();\n        }\n        if (!wd.findElement(By.xpath("//div[3]/form/select[2]//option[6]")).isSelected()) {\n            wd.findElement(By.xpath("//div[3]/form/select[2]//option[6]")).click();\n        }\n        wd.findElement(By.cssSelector("input.btn.btn-primary")).click();\n        wd.findElement(By.xpath("//table[@class=\'table\']/tbody/tr[4]/td[1]/input")).click();\n        wd.findElement(By.cssSelector("input.btn.btn-primary")).click();\n    }\n\n    @After\n    public void tearDown() {\n        wd.quit();\n    }\n\n    public static boolean isAlertPresent(FirefoxDriver wd) {\n        try {\n            wd.switchTo().alert();\n            return true;\n        } catch (NoAlertPresentException e) {\n            return false;\n        }\n    }\n}\n', u'isExtra': False, u'label': u'sample'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 20, u'rampup': 1, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'location': u'us-central1-a', u'concurrency': 2, u'javaVersion': u'1.7'}, u'id': 5246896}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471444249, u'name': u'demo44sand', u'created': 1471444241, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_30_09_149837_2324', u'lastRunTime': 1471444249, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo44.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250424}
+[2016-09-08 16:33:32,722 DEBUG BlazeMeterClient] Test: {u'updated': 1471444021, u'name': u'demo44', u'created': 1471443697, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_21_16_149837_8393', u'lastRunTime': 1471444021, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 1000, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 600, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo44.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250415}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471443153, u'name': u'demo43', u'created': 1471443047, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_17_10_10_30_149837_4679', u'lastRunTime': 1471443153, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo43.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5250402}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471437006, u'name': u'demo42', u'created': 1471436989, u'projectId': 41370, u'userId': 149837, u'draftId': u'td_2016_08_17_08_29_11_149837_3984', u'lastRunTime': 1471437006, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo42.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5250294}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471375735, u'name': u'demo41_opl', u'created': 1471375117, u'projectId': 41456, u'userId': 149837, u'draftId': u'td_2016_08_16_15_16_59_149837_6643', u'lastRunTime': 1471375735, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-57596c2187a875f532fc9b80', u'concurrency': 3, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 3, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo41.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249577}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471371975, u'name': u'demo41', u'created': 1471371966, u'projectId': 41455, u'userId': 149837, u'draftId': u'td_2016_08_16_14_23_54_149837_6455', u'lastRunTime': 1471371975, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 200, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo41.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249538}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471362645, u'name': u'demo40', u'created': 1471361550, u'projectId': 41443, u'userId': 149837, u'draftId': u'td_2016_08_16_11_28_50_149837_6739', u'lastRunTime': 1471362645, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 150, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'thresholds': {u'thresholds': [{u'field': u'responseTime.avg', u'op': u'lt', u'description': u'too long', u'value': u'700', u'label': u'ALL'}], u'slidingWindow': False}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo40.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5249391}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471024281, u'name': u'blazedemo_nr', u'created': 1471024281, u'projectId': 41370, u'userId': 149837, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 2500, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'www.blazedemo.com', u'label': u'blazedemo', u'headers': [], u'type': u'GET', u'order': 1}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'location': u'us-central1-a', u'concurrency': 20, u'javaVersion': u'1.7'}, u'id': 5246878}
+[2016-09-08 16:33:32,723 DEBUG BlazeMeterClient] Test: {u'updated': 1471019386, u'name': u'simple_travel_url', u'created': 1471019378, u'projectId': 41370, u'userId': 149837, u'lastRunTime': 1471019386, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'http': {u'delay': 480, u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://54.210.176.248:8000/', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 1}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5246835}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470939701, u'name': u'Optum1', u'created': 1469650909, u'projectId': 39649, u'userId': 106819, u'draftId': u'td_2016_07_27_13_11_08_106819_4552', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-5591335d8588531f5cde3a04', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}, u'newrelic': [u'561ec211848853c37fd9eea3']}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5236874}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470939634, u'name': u'Optum1 - Copy', u'created': 1470939634, u'projectId': 36993, u'userId': 106819, u'draftId': u'td_2016_07_27_13_11_08_106819_4552', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-555543a256e0941b4bb6edad', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 30, u'rampup': 100, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}, u'newrelic': [u'561ec211848853c37fd9eea3']}, u'duration': 30, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5246100}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470939611, u'name': u'test123', u'created': 1470935973, u'projectId': 36998, u'userId': 106819, u'draftId': u'td_2016_08_11_10_13_23_106819_6387', u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'harbor-555543a256e0941b4bb6edad', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 10, u'rampup': 10, u'iterations': -1}, u'version': u'2.13', u'filename': u'Test100.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5246069}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470850461, u'name': u'Test12', u'created': 1470850450, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_10_10_26_45_106819_329', u'lastRunTime': 1470850461, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 10, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 10, u'iterations': -1}, u'version': u'2.13', u'filename': u'demotour.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5245048}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470733134, u'name': u'Aldo_8_9_50K_Final', u'created': 1470678796, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_08_10_51_56_106819_4075', u'lastRunTime': 1470733134, u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 45, u'location': u'us-east-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 60, u'rampup': 1800, u'threads': 500, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_again.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.8'}, u'id': 5242728}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470678819, u'name': u'Aldo_New', u'created': 1470420848, u'projectId': None, u'userId': 106819, u'draftId': u'td_2016_08_05_11_13_12_106819_959', u'lastRunTime': 1470678819, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 40, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 10, u'rampup': 60, u'iterations': -1}, u'version': u'2.13', u'filename': u'Aldo_again.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.8'}, u'id': 5241581}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470658834, u'name': u'demo32', u'created': 1470656908, u'projectId': 41256, u'userId': 149837, u'draftId': u'td_2016_08_08_07_47_35_149837_9793', u'lastRunTime': 1470658834, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo32.jmx'}, u'hosts': [{u'ip': u'54.210.176.248', u'hostname': u'aws-uut'}], u'dynaTrace': {u'headerAttributes': []}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5242371}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470653732, u'name': u'SimpleTravel home', u'created': 1470650048, u'projectId': 41222, u'userId': 149837, u'lastRunTime': 1470653732, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 20, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'dynaTrace': {u'headerAttributes': []}, u'hosts': [{u'ip': u'54.210.176.248', u'hostname': u'aws-uut'}], u'http': {u'delay': 2500, u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'pages': [{u'body': u'', u'url': u'http://aws-uut', u'label': u'home', u'headers': [], u'type': u'GET', u'order': 0}], u'delayUnit': u'milliseconds'}}, u'type': u'http', u'javaVersion': u'1.7'}, u'id': 5242275}
+[2016-09-08 16:33:32,724 DEBUG BlazeMeterClient] Test: {u'updated': 1470422002, u'name': u'demo25', u'created': 1470421345, u'projectId': 41222, u'userId': 149837, u'draftId': u'td_2016_08_05_14_17_26_149837_5505', u'lastRunTime': 1470422002, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 300, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo25.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5241583}
+[2016-09-08 16:33:32,725 DEBUG BlazeMeterClient] Test: {u'updated': 1470352841, u'name': u'Test', u'created': 1470352833, u'projectId': None, u'userId': 106819, u'lastRunTime': 1470352841, u'configuration': {u'dedicatedIpsEnabled': False, u'serversCount': 1, u'location': u'us-west-1', u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'webdriver': {u'waterfallEnabled': False, u'samplers': [{u'code': u'var pkg = JavaImporter(org.openqa.selenium);\nvar support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);\nvar wait = new support_ui.WebDriverWait(WDS.browser, 5000);\n\nWDS.sampleResult.sampleStart();\nWDS.browser.manage().window().maximize();\nWDS.browser.get("http://localhost");\n\nvar searchField = WDS.browser.findElement(pkg.By.id("some_element_id"));\nsearchField.click();\nWDS.log.info(WDS.name, "has logged an entry");\n\nWDS.sampleResult.sampleEnd();', u'isExtra': False, u'label': u'Test'}], u'delay': 2500, u'delayUnit': u'milliseconds', u'override': {u'duration': 20, u'rampup': 300, u'threads': 5, u'iterations': -1}, u'browser': u'firefox'}}, u'type': u'webdriver', u'javaVersion': u'1.7'}, u'id': 5241124}
+[2016-09-08 16:33:32,725 DEBUG BlazeMeterClient] Test: {u'updated': 1470246946, u'name': u'bzt generated jmeter', u'created': 1470246936, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_13_51_30_149837_8473', u'lastRunTime': 1470246946, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 500, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 20, u'rampup': 300, u'iterations': -1}, u'version': u'2.13', u'filename': u'modified_requests.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5240463}
+[2016-09-08 16:33:32,725 DEBUG BlazeMeterClient] Test: {u'updated': 1470240344, u'name': u'Demo23', u'created': 1470239763, u'projectId': 41150, u'userId': 149837, u'draftId': u'td_2016_08_03_11_53_21_149837_2259', u'lastRunTime': 1470240344, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-east-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'demo23.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5240418}
+[2016-09-08 16:33:32,725 DEBUG BlazeMeterClient] Test: {u'updated': 1470237300, u'name': u'concurrency example', u'created': 1470237050, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_08_03_11_09_58_149837_9530', u'lastRunTime': 1470237300, u'configuration': {u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 3, u'rampup': 120, u'iterations': -1}, u'version': u'2.13', u'filename': u'concurrency-example.jmx'}}, u'type': u'jmeter', u'location': u'us-central1-a', u'concurrency': 150, u'javaVersion': u'1.7'}, u'id': 5240396}
+[2016-09-08 16:33:32,725 DEBUG BlazeMeterClient] Test: {u'updated': 1469814878, u'name': u'recording demo', u'created': 1469814864, u'projectId': 40880, u'userId': 149837, u'draftId': u'td_2016_07_29_13_52_05_149837_9606', u'lastRunTime': 1469814878, u'configuration': {u'dedicatedIpsEnabled': False, u'location': u'us-west-1', u'concurrency': 100, u'plugins': {u'splitCSV': {u'enabled': False}, u'reportEmail': {u'enabled': True}, u'jmeter': {u'override': {u'duration': 2, u'rampup': 30, u'iterations': -1}, u'version': u'2.13', u'filename': u'recording.jmx'}}, u'type': u'jmeter', u'javaVersion': u'1.7'}, u'id': 5237865}
+[2016-09-08 16:33:32,725 DEBUG BlazeMeterClient] Using test ID: 5266492
+[2016-09-08 16:33:32,727 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.yml
+[2016-09-08 16:33:32,749 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.json
+[2016-09-08 16:33:32,750 INFO Engine] Starting...
+[2016-09-08 16:33:32,750 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x1011d6f50>
+[2016-09-08 16:33:32,750 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x1011d6190>
+[2016-09-08 16:33:32,750 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x102780990>
+[2016-09-08 16:33:32,750 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x102766310>
+[2016-09-08 16:33:32,751 INFO Engine.console] Waiting for results...
+[2016-09-08 16:33:32,751 DEBUG Engine] Startup <bzt.modules.blazemeter.BlazeMeterUploader object at 0x1028ae950>
+[2016-09-08 16:33:32,751 INFO Engine.blazemeter.BlazeMeterUploader] Initiating data feeding...
+[2016-09-08 16:33:32,751 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/tests/5267079/start-external None
+[2016-09-08 16:33:33,338 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "session": {
+            "id": "r-ext-57d1f54d08143",
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "offset": 0,
+            "statusCode": 15,
+          
+[2016-09-08 16:33:33,338 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PATCH https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54d08143 {
+ "name": "Taurus_SN_Simple"
+}
+[2016-09-08 16:33:33,864 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f54d08143",
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 15,
+        "status": "INITIALIZING",
+        "labels":
+[2016-09-08 16:33:33,864 INFO Engine.blazemeter] Started data feeding: https://a.blazemeter.com/app/#reports/15550690
+[2016-09-08 16:33:33,923 DEBUG Engine] Startup <bzt.modules.blazemeter.BlazeMeterUploader object at 0x1028aea50>
+[2016-09-08 16:33:33,923 INFO Engine.blazemeter.BlazeMeterUploader] Initiating data feeding...
+[2016-09-08 16:33:33,923 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/tests/5266492/start-external None
+[2016-09-08 16:33:34,478 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "session": {
+            "id": "r-ext-57d1f54e2e8a8",
+            "name": "Taurus Test",
+            "userId": 106819,
+            "offset": 0,
+            "statusCode": 15,
+            "st
+[2016-09-08 16:33:34,478 INFO Engine.blazemeter] Started data feeding: https://a.blazemeter.com/app/#reports/15550691
+[2016-09-08 16:33:34,531 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x1011d6110>
+[2016-09-08 16:33:34,532 DEBUG Engine.local] Delay setup: 0(start-at) + 0(delay) = 0
+[2016-09-08 16:33:34,533 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.yml
+[2016-09-08 16:33:34,555 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.json
+[2016-09-08 16:33:34,556 DEBUG Engine] Checking <bzt.modules.provisioning.Local object at 0x1011d6110>
+[2016-09-08 16:33:34,556 DEBUG bzt.utils] Executing shell: [u'/Users/sidnarang/.bzt/jmeter-taurus/bin/jmeter.sh', '-n', '-t', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/modified_requests.jmx', '-j', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/jmeter.log', '-q', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/jmeter-bzt.properties', '-S', '/Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/system.properties']
+[2016-09-08 16:33:34,560 DEBUG Engine] Checking <bzt.modules.aggregator.ConsolidatingAggregator object at 0x1011d6190>
+[2016-09-08 16:33:34,560 DEBUG Engine.jmeter.JTLErrorsReader] File not exists: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/error.jtl
+[2016-09-08 16:33:34,561 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] File not appeared yet: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+[2016-09-08 16:33:34,561 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] No data to start reading yet
+[2016-09-08 16:33:34,561 DEBUG Engine.jmeter.JTLReader] Buffer len: 0
+[2016-09-08 16:33:34,561 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2016-09-08 16:33:34,561 DEBUG Engine] Checking <bzt.modules.monitoring.Monitoring object at 0x1011d6f50>
+[2016-09-08 16:33:34,767 WARNING Engine] Please wait for graceful shutdown...
+[2016-09-08 16:33:34,767 INFO Engine] Shutting down...
+[2016-09-08 16:33:34,767 DEBUG Engine.local] Shutdown jmeter/quick-test
+[2016-09-08 16:33:35,768 INFO Engine.jmeter] Sending Shutdown command to JMeter on port 4445...
+[2016-09-08 16:33:38,770 DEBUG Engine.jmeter] JMeter stopped on Shutdown command
+[2016-09-08 16:33:38,771 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2016-09-08 16:33:38,774 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.yml
+[2016-09-08 16:33:38,799 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.json
+[2016-09-08 16:33:38,805 DEBUG root] Caught exception in try: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/bzt/cli.py", line 156, in perform
+    self.engine.run()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 139, in run
+    self._wait()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 166, in _wait
+    while not self._check_modules_list():
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 156, in _check_modules_list
+    finished |= module.check()
+  File "/Library/Python/2.7/site-packages/bzt/modules/monitoring.py", line 71, in check
+    listener.monitoring_data(results)
+  File "/Library/Python/2.7/site-packages/bzt/modules/blazemeter.py", line 339, in monitoring_data
+    self.monitoring_buffer.record_data(data)
+  File "/Library/Python/2.7/site-packages/bzt/modules/blazemeter.py", line 436, in record_data
+    source = item.pop('source')
+KeyError: 'source'
+
+[2016-09-08 16:33:38,805 ERROR root] KeyError: 'source'
+[2016-09-08 16:33:38,805 INFO Engine] Post-processing...
+[2016-09-08 16:33:38,805 DEBUG Engine.local] Post-process jmeter/quick-test
+[2016-09-08 16:33:38,805 DEBUG Engine] Add existing artifact (move=True): /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/modified_requests.jmx
+[2016-09-08 16:33:38,806 DEBUG Engine] No need to copy /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/modified_requests.jmx
+[2016-09-08 16:33:38,807 ERROR Engine] Error while post-processing: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 212, in post_process
+    module.post_process()
+  File "/Library/Python/2.7/site-packages/bzt/modules/provisioning.py", line 120, in post_process
+    executor.post_process()
+  File "/Library/Python/2.7/site-packages/bzt/modules/jmeter.py", line 240, in post_process
+    raise RuntimeWarning(msg % self.kpi_jtl)
+RuntimeWarning: Empty results JTL, most likely JMeter failed: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+
+[2016-09-08 16:33:38,808 DEBUG Engine.jmeter.JTLErrorsReader] Opening /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/error.jtl
+[2016-09-08 16:33:38,808 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Opening file: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+[2016-09-08 16:33:38,808 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+[2016-09-08 16:33:38,808 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 2 / 225 bytes (at speed 1048576)
+[2016-09-08 16:33:38,809 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Analyzed header line: ['timeStamp', 'elapsed', 'label', 'responseCode', 'responseMessage', 'threadName', 'success', 'grpThreads', 'allThreads', 'Latency', 'Hostname', 'Connect']
+[2016-09-08 16:33:38,810 DEBUG Engine.jmeter.JTLReader] Buffer len: 1
+[2016-09-08 16:33:38,810 DEBUG Engine.jmeter.JTLReader] Aggregating: 1473377615
+[2016-09-08 16:33:38,810 DEBUG Engine.consolidator] Consolidator buffer[1]: [1473377615]
+[2016-09-08 16:33:38,810 DEBUG Engine.consolidator] Merging into 1473377615
+[2016-09-08 16:33:38,810 DEBUG Engine.consolidator] Merging 1473377615
+[2016-09-08 16:33:38,813 DEBUG Engine.consolidator] Processed datapoint: 1473377615/None
+[2016-09-08 16:33:38,813 INFO Engine.final_stats] Test duration: 0:00:06
+[2016-09-08 16:33:38,813 INFO Engine.final_stats] Samples count: 1, 0.00% failures
+[2016-09-08 16:33:38,813 INFO Engine.final_stats] Average times: total 2.734, latency 1.111, connect 0.665
+[2016-09-08 16:33:38,813 INFO Engine.final_stats] Percentile 0.0%: 2.734
+[2016-09-08 16:33:38,814 INFO Engine.final_stats] Percentile 50.0%: 2.734
+[2016-09-08 16:33:38,814 INFO Engine.final_stats] Percentile 90.0%: 2.734
+[2016-09-08 16:33:38,814 INFO Engine.final_stats] Percentile 95.0%: 2.734
+[2016-09-08 16:33:38,814 INFO Engine.final_stats] Percentile 99.0%: 2.734
+[2016-09-08 16:33:38,814 INFO Engine.final_stats] Percentile 99.9%: 2.734
+[2016-09-08 16:33:38,814 INFO Engine.final_stats] Percentile 100.0%: 2.734
+[2016-09-08 16:33:38,814 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2016-09-08 16:33:38,814 DEBUG Engine.blazemeter] KPI bulk buffer len in post-proc: 1
+[2016-09-08 16:33:38,816 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://data.blazemeter.com/submit.php?session_id=r-ext-57d1f54d08143&signature=cdf210a27833471c42a517626fc647bc&test_id=5267079&user_id=106819&pq=0&target=labels_bulk&update=1 {
+ "sourceID": 4337625488, 
+ "labels": [
+  {
+   "percentileHistogramLatency": [], 
+   "otherErrorsCount": 0, 
+   "failedEmbeddedResources": [], 
+   "intervals": [
+    {
+     "by": {
+      "std": 0, 
+      "min": 0, 
+      "max": 0, 
+      "sum": 0, 
+      
+[2016-09-08 16:33:39,868 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {"api_version":2,"error":null,"result":{"session":{"_id":"r-ext-57d1f54d08143","name":"Taurus_SN_Simple","statusCode":100,"status":"INITIALIZING"}}}
+[2016-09-08 16:33:39,876 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f54d08143/files?signature=cdf210a27833471c42a517626fc647bc --===============1708685314704717274==
+Content-Disposition: file; name="file"; filename="Sids-MacBook-Pro-2.local.monitoring.json"
+Content-Type: application/json
+
+{
+ "kpis": {
+  "CPU": "CPU", 
+  "Network I/O": "Network I/O", 
+  "Memory": "Memory"
+ }, 
+
+[2016-09-08 16:33:41,298 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "Sids-MacBook-Pro-2.local.monitoring.json"
+    ]
+}
+[2016-09-08 16:33:41,306 INFO Engine.blazemeter] Uploading all artifacts as artifacts.zip ...
+[2016-09-08 16:33:41,307 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f54d08143/files?signature=cdf210a27833471c42a517626fc647bc --===============2158786903042135320==
+Content-Disposition: file; name="file"; filename="artifacts.zip"
+Content-Type: application/zip
+
+PK    3Ñ(I∫ÌÅ±  Ç     effective.jsonµŸn#7Ú›_!ÀbI…gÏyKf'≥åcÌ≤’Õñ(±õ∂4Ô∑oÒj≤[ó±ád™XãuRﬂOFcEµfÕ\çﬂ
+[2016-09-08 16:33:42,165 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "artifacts.zip"
+    ]
+}
+[2016-09-08 16:33:42,165 INFO Engine.blazemeter] Uploading /Users/sidnarang/Desktop/justsimpledemo/jenkins/bzt.log
+[2016-09-08 16:33:42,166 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f54d08143/files?signature=cdf210a27833471c42a517626fc647bc --===============3341940063123267271==
+Content-Disposition: file; name="file"; filename="/Users/sidnarang/Desktop/justsimpledemo/jenkinsbzt.log"
+Content-Type: text/plain
+
+[2016-09-08 16:33:28,596 INFO root] Taurus CLI Tool v1.6.8
+[2016-09-08 16:33:28,5
+[2016-09-08 16:33:43,268 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "jenkinsbzt.log"
+    ]
+}
+[2016-09-08 16:33:43,269 DEBUG Engine.blazemeter] Set last check time to: 1473377609.46
+[2016-09-08 16:33:43,269 INFO Engine.blazemeter.BlazeMeterUploader] Ending data feeding...
+[2016-09-08 16:33:43,269 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54d08143/terminate None
+[2016-09-08 16:33:43,809 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "success": true,
+        "session": {
+            "id": "r-ext-57d1f54d08143",
+            "name": "Taurus_SN_Simple",
+            "userId": 106819,
+            "offset": 0,
+            "st
+[2016-09-08 16:33:43,809 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54d08143 None
+[2016-09-08 16:33:44,293 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f54d08143",
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 140,
+        "status": "ENDED",
+        "ended": 147337
+[2016-09-08 16:33:44,293 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PUT https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54d08143 {
+ "note": "KeyError: 'source'"
+}
+[2016-09-08 16:33:44,788 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f54d08143",
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 140,
+        "status": "ENDED",
+        "ended": 147337
+[2016-09-08 16:33:44,788 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/masters/15550690 None
+[2016-09-08 16:33:45,254 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": 15550690,
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "ended": 1473377623,
+        "usage": 1,
+        "maxUsers": 1,
+        "created": 1473377613,
+        
+[2016-09-08 16:33:45,254 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PUT https://a.blazemeter.com/api/latest/masters/15550690 {
+ "note": "KeyError: 'source'"
+}
+[2016-09-08 16:33:45,720 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": 15550690,
+        "name": "Taurus_SN_Simple",
+        "userId": 106819,
+        "ended": 1473377623,
+        "usage": 1,
+        "maxUsers": 1,
+        "created": 1473377613,
+        
+[2016-09-08 16:33:45,720 INFO Engine.blazemeter] Online report link: https://a.blazemeter.com/app/#reports/15550690
+[2016-09-08 16:33:45,721 DEBUG Engine.blazemeter] KPI bulk buffer len in post-proc: 1
+[2016-09-08 16:33:45,722 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://data.blazemeter.com/submit.php?session_id=r-ext-57d1f54e2e8a8&signature=1083eddd137273ae17e6905c662f3daf&test_id=5266492&user_id=106819&pq=0&target=labels_bulk&update=1 {
+ "sourceID": 4337625744, 
+ "labels": [
+  {
+   "percentileHistogramLatency": [], 
+   "otherErrorsCount": 0, 
+   "failedEmbeddedResources": [], 
+   "intervals": [
+    {
+     "by": {
+      "std": 0, 
+      "min": 0, 
+      "max": 0, 
+      "sum": 0, 
+      
+[2016-09-08 16:33:46,123 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {"api_version":2,"error":null,"result":{"session":{"_id":"r-ext-57d1f54e2e8a8","name":"Taurus Test","statusCode":100,"status":"INITIALIZING"}}}
+[2016-09-08 16:33:46,124 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f54e2e8a8/files?signature=1083eddd137273ae17e6905c662f3daf --===============7701742320925294746==
+Content-Disposition: file; name="file"; filename="Sids-MacBook-Pro-2.local.monitoring.json"
+Content-Type: application/json
+
+{
+ "kpis": {
+  "CPU": "CPU", 
+  "Network I/O": "Network I/O", 
+  "Memory": "Memory"
+ }, 
+
+[2016-09-08 16:33:46,877 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "Sids-MacBook-Pro-2.local.monitoring.json"
+    ]
+}
+[2016-09-08 16:33:46,882 INFO Engine.blazemeter] Uploading all artifacts as artifacts.zip ...
+[2016-09-08 16:33:46,882 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f54e2e8a8/files?signature=1083eddd137273ae17e6905c662f3daf --===============8051329247220052614==
+Content-Disposition: file; name="file"; filename="artifacts.zip"
+Content-Type: application/zip
+
+PK    3Ñ(I∫ÌÅ±  Ç     effective.jsonµŸn#7Ú›_!ÀbI…gÏyKf'≥åcÌ≤’Õñ(±õ∂4Ô∑oÒj≤[ó±ád™XãuRﬂOFcEµfÕ\çﬂ
+[2016-09-08 16:33:47,920 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "artifacts.zip"
+    ]
+}
+[2016-09-08 16:33:47,920 INFO Engine.blazemeter] Uploading /Users/sidnarang/Desktop/justsimpledemo/jenkins/bzt.log
+[2016-09-08 16:33:47,920 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: POST https://a.blazemeter.com/api/latest/image/r-ext-57d1f54e2e8a8/files?signature=1083eddd137273ae17e6905c662f3daf --===============9147838653809379744==
+Content-Disposition: file; name="file"; filename="/Users/sidnarang/Desktop/justsimpledemo/jenkinsbzt.log"
+Content-Type: text/plain
+
+[2016-09-08 16:33:28,596 INFO root] Taurus CLI Tool v1.6.8
+[2016-09-08 16:33:28,5
+[2016-09-08 16:33:49,174 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": [
+        "jenkinsbzt.log"
+    ]
+}
+[2016-09-08 16:33:49,174 DEBUG Engine.blazemeter] Set last check time to: 1473377609.46
+[2016-09-08 16:33:49,175 INFO Engine.blazemeter.BlazeMeterUploader] Ending data feeding...
+[2016-09-08 16:33:49,175 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54e2e8a8/terminate None
+[2016-09-08 16:33:49,708 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "success": true,
+        "session": {
+            "id": "r-ext-57d1f54e2e8a8",
+            "name": "Taurus Test",
+            "userId": 106819,
+            "offset": 0,
+            "statusC
+[2016-09-08 16:33:49,708 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54e2e8a8 None
+[2016-09-08 16:33:50,184 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f54e2e8a8",
+        "name": "Taurus Test",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 140,
+        "status": "ENDED",
+        "ended": 1473377629,
+[2016-09-08 16:33:50,185 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PUT https://a.blazemeter.com/api/latest/sessions/r-ext-57d1f54e2e8a8 {
+ "note": "KeyError: 'source'"
+}
+[2016-09-08 16:33:50,703 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": "r-ext-57d1f54e2e8a8",
+        "name": "Taurus Test",
+        "userId": 106819,
+        "offset": 0,
+        "statusCode": 140,
+        "status": "ENDED",
+        "ended": 1473377629,
+[2016-09-08 16:33:50,703 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: GET https://a.blazemeter.com/api/latest/masters/15550691 None
+[2016-09-08 16:33:51,166 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": 15550691,
+        "name": "Taurus Test",
+        "userId": 106819,
+        "ended": 1473377629,
+        "usage": 1,
+        "maxUsers": 1,
+        "created": 1473377614,
+        "upda
+[2016-09-08 16:33:51,166 DEBUG Engine.blazemeter.BlazeMeterUploader] Request: PUT https://a.blazemeter.com/api/latest/masters/15550691 {
+ "note": "KeyError: 'source'"
+}
+[2016-09-08 16:33:51,682 DEBUG Engine.blazemeter.BlazeMeterUploader] Response: {
+    "api_version": 2,
+    "error": null,
+    "result": {
+        "id": 15550691,
+        "name": "Taurus Test",
+        "userId": 106819,
+        "ended": 1473377629,
+        "usage": 1,
+        "maxUsers": 1,
+        "created": 1473377614,
+        "upda
+[2016-09-08 16:33:51,682 INFO Engine.blazemeter] Online report link: https://a.blazemeter.com/app/#reports/15550691
+[2016-09-08 16:33:51,683 DEBUG Engine.Configuration] Dumping YAML config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.yml
+[2016-09-08 16:33:51,708 DEBUG Engine.Configuration] Dumping JSON config into /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/effective.json
+[2016-09-08 16:33:51,709 DEBUG Engine] Exception in post-process: Empty results JTL, most likely JMeter failed: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+[2016-09-08 16:33:51,709 WARNING Engine] Failed post-processing
+[2016-09-08 16:33:51,709 DEBUG root] Caught exception in finally: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/bzt/cli.py", line 176, in perform
+    self.engine.post_process()
+  File "/Library/Python/2.7/site-packages/bzt/engine.py", line 233, in post_process
+    raise exception
+RuntimeWarning: Empty results JTL, most likely JMeter failed: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+
+[2016-09-08 16:33:51,709 ERROR root] RuntimeWarning: Empty results JTL, most likely JMeter failed: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/kpi.jtl
+[2016-09-08 16:33:51,709 INFO root] Artifacts dir: /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396
+[2016-09-08 16:33:51,709 WARNING root] Done performing with code: 1
+[2016-09-08 16:33:51,709 DEBUG Engine] Add existing artifact (move=True): bzt.log
+[2016-09-08 16:33:51,710 DEBUG Engine] Moving bzt.log to /Users/sidnarang/Desktop/justsimpledemo/jenkins/2016-09-08_16-33-28.991396/bzt.log

@@ -1,0 +1,18 @@
+---
+execution:
+- concurrency: 100
+  hold-for: 5m
+  ramp-up: 1m
+  scenario: quick-test
+modules:
+  blazemeter:
+    token: '********'
+reporting:
+- module: blazemeter
+  report-name: Taurus_SN_Simple
+  test: Taurus_SN_Simple
+scenarios:
+  quick-test:
+    requests:
+    - http://blazedemo.com
+
